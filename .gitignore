@@ -1,0 +1,10 @@
+ca.crt
+Backup
+.env
+Wish_Name.*
+xScheduleData
+greglights_config.json
+media
+*.fseq
+*.xbkp
+__pycache__
