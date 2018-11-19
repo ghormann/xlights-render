@@ -33,7 +33,7 @@ def generateSeq():
 	print("SEQ Complete");
 
 def sendSeq():
-	subprocess.call(["rsync", "-avz", "Wish_Name.fseq", "fpp@192.168.1.150:/home/fpp/media/sequences"])
+	subprocess.call(["rsync", "-avz", "--bwlimit=160", "Wish_Name.fseq", "fpp@192.168.1.150:/home/fpp/media/sequences"])
 	print("Rsync complete")
 
 if __name__ == "__main__":
