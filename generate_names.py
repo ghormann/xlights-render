@@ -33,11 +33,11 @@ def generateSeq():
 	print("SEQ Complete");
 
 def sendSeq():
-	subprocess.call(["rsync", "-avz", "--bwlimit=160", "Wish_Name.fseq", "fpp@192.168.1.150:/home/fpp/media/sequences"])
+	subprocess.call(["rsync", "-avW", "--bwlimit=1200", "Wish_Name.fseq", "fpp@192.168.1.150:/home/fpp/media/sequences"])
 	print("Rsync complete")
 
 if __name__ == "__main__":
         baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE']
-        genereateXml(baseNames)
-        generateSeq()
+        #genereateXml(baseNames)
+        #generateSeq()
         sendSeq()
