@@ -26,7 +26,7 @@ class MQTTClient:
     # The callback for Song 
     def on_song(self, client, userdata, msg):
         song = msg.payload.decode('UTF-8').upper()
-        print("Received SOng " + msg.topic+" "+ song)
+        gen.logIt("Received SOng " + msg.topic+" "+ song)
         if "SUGAR_PLUM" in song:
             self.updateSong()
         if "HERECOMES" in song:
@@ -39,17 +39,17 @@ class MQTTClient:
     # The callback for Names
     def on_name(self, client, userdata, msg):
         name = msg.payload.decode('UTF-8').upper()
-        print("Received Name " + msg.topic+" "+ name)
+        gen.logIt("Received Name " + msg.topic+" "+ name)
         if name in self.namequeue:
-            print('Name already in queue')
+            gen.logIt('Name already in queue')
         else:
-            print('Adding to queue')
+            gen.logIt('Adding to queue')
             self.namequeue.append(name);
 
     def updateSong(self):
-        print("----------------------------")
-        print(datetime.datetime.now())
-        print("----------------------------")
+        gen.logIt("----------------------------")
+        gen.logIt(datetime.datetime.now())
+        gen.logIt("----------------------------")
         use_me = []
         extra = baseNames.copy()
         while len(use_me) < 10:
@@ -57,18 +57,18 @@ class MQTTClient:
                 use_me.append(self.namequeue.pop(0))
             else:
                 use_me.append(extra.pop(0))
-        print("Genereating with " + str(use_me))
+        gen.logIt("Genereating with " + str(use_me))
         gen.genereateXml(use_me)
         gen.generateSeq()
         gen.sendSeq()
-        print("----------------------------")
-        print(datetime.datetime.now())
-        print("----------------------------")
+        gen.logIt("----------------------------")
+        gen.logIt(datetime.datetime.now())
+        gen.logIt("----------------------------")
 
         
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
-    print("Connected with result code "+str(rc))
+    gen.logIt("Connected with result code "+str(rc))
     client.subscribe("/christmas/personsName", 2)
     client.subscribe("/christmas/currentSong", 2)
 
@@ -78,7 +78,7 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    print("Unhandled Topic: " + msg.topic)
+    gen.logIt("Unhandled Topic: " + msg.topic)
 
 if __name__ == "__main__":
     client = MQTTClient()

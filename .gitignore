@@ -8,3 +8,4 @@ media
 *.fseq
 *.xbkp
 __pycache__
+greg.log

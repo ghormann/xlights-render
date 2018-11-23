@@ -1,4 +1,13 @@
+import datetime
 import subprocess
+
+LOG_FILE="greg.log"
+LOG= open(LOG_FILE, 'a+')
+
+def logIt(msg):
+	LOG.write(str(datetime.datetime.now()) + ": " + str(msg) + "\n")
+	print(str(datetime.datetime.now()) + ": " + str(msg) )
+	LOG.flush()
 
 # Call with exact 10 names
 def genereateXml(names):
@@ -26,15 +35,15 @@ def genereateXml(names):
 				line = line.replace("%NAME9%", n9)
 				line = line.replace("%NAMEA%", nA)
 				f_out.write(line)
-	print("XML Complete");
+	logIt("XML Complete");
 
 def generateSeq():
 	subprocess.call(["xLights", "-r", "Wish_Name.xml"])
-	print("SEQ Complete");
+	logIt("SEQ Complete");
 
 def sendSeq():
 	subprocess.call(["rsync", "-av", "--bwlimit=1200", "Wish_Name.fseq", "fpp@192.168.1.150:/home/fpp/media/sequences"])
-	print("Rsync complete")
+	logIt("Rsync complete")
 
 if __name__ == "__main__":
         baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE']
