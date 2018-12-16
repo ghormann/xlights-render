@@ -43,12 +43,13 @@ class MQTTClient:
         if name in self.namequeue:
             gen.logIt('Name already in queue')
         else:
-            gen.logIt('Adding to queue')
             self.namequeue.append(name);
+            gen.logIt('Adding to queue, size: ' + str(len(self.namequeue)))
 
     def updateSong(self):
         gen.logIt("----------------------------")
         gen.logIt(datetime.datetime.now())
+        gen.logIt('Queue size: ' + str(len(self.namequeue)))
         gen.logIt("----------------------------")
         use_me = []
         extra = baseNames.copy()
