@@ -21,6 +21,9 @@ def genereateXml(names):
 	n8 = names.pop(0)
 	n9 = names.pop(0)
 	nA = names.pop(0)
+	nB = names.pop(0)
+	nC = names.pop(0)
+	nD = names.pop(0)
 	with open("Wish_Name.xml", "w+") as f_out:
 		with open("Wish_Name_Template.xml") as f:
 			for line in f:
@@ -34,6 +37,9 @@ def genereateXml(names):
 				line = line.replace("%NAME8%", n8)
 				line = line.replace("%NAME9%", n9)
 				line = line.replace("%NAMEA%", nA)
+				line = line.replace("%NAMEB%", nB)
+				line = line.replace("%NAMEC%", nC)
+				line = line.replace("%NAMED%", nD)
 				f_out.write(line)
 	logIt("XML Complete");
 

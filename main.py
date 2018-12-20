@@ -3,9 +3,10 @@ import datetime
 import json
 import time
 import ssl
+from random import shuffle
 import generate_names as gen
 
-baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE']
+baseNames = ['JEFF', 'BRADY','MARY', 'NANCY','JERRY', 'HENERY', 'ALEX', 'TIM', 'ABBIE','MELISSA', 'JUDY', 'BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE']
 
 class MQTTClient:
     """Very simple MQTTClient for listening to names to be displayed on Grid"""
@@ -53,7 +54,8 @@ class MQTTClient:
         gen.logIt("----------------------------")
         use_me = []
         extra = baseNames.copy()
-        while len(use_me) < 10:
+        shuffle(extra)
+        while len(use_me) < 13:
             if (len(self.namequeue) > 0):
                 use_me.append(self.namequeue.pop(0))
             else:

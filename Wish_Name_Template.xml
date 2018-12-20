@@ -58,11 +58,14 @@
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAME8%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAME9%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAMEA%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAMEB%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAMEC%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAMED%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-6,E_TEXTCTRL_Text=Under the clock,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 16,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=20,E_TEXTCTRL_Text=Merry,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=left,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-38,E_TEXTCTRL_Text=Text first name to (513) 854-1352,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-26,E_TEXTCTRL_Text=updated every few,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-45,E_TEXTCTRL_Text=minutes...,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-26,E_TEXTCTRL_Text=updated every,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-45,E_TEXTCTRL_Text=minute.,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_FIRETIMING=1,E_CHECKBOX_Fireworks_UseMusic=0,E_CHOICE_FIRETIMINGTRACK=Fireworks,E_SLIDER_Fireworks_Count=100,E_SLIDER_Fireworks_Explosions=46,E_SLIDER_Fireworks_Fade=50,E_SLIDER_Fireworks_Velocity=2</Effect>
     <Effect>E_CHECKBOX_Fire_GrowWithMusic=0,E_CHOICE_Fire_Location=Bottom,E_SLIDER_Fire_Height=31,E_SLIDER_Fire_HueShift=0,E_TEXTCTRL_Fire_GrowthCycles=0.0,T_TEXTCTRL_Fadein=1.0,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHOICE_Butterfly_Colors=Rainbow,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1,T_CHOICE_LayerMethod=2 is Unmask,T_TEXTCTRL_Fadein=1.0,T_TEXTCTRL_Fadeout=0.5</Effect>
@@ -247,16 +250,18 @@
     <Element type="timing" name="Fireworks">
       <EffectLayer>
         <Effect label="" startTime="0" endTime="100"></Effect>
-        <Effect label="" startTime="100" endTime="5000"></Effect>
-        <Effect label="" startTime="5000" endTime="10000"></Effect>
-        <Effect label="" startTime="10000" endTime="15000"></Effect>
-        <Effect label="" startTime="15000" endTime="20000"></Effect>
-        <Effect label="" startTime="20000" endTime="25000"></Effect>
-        <Effect label="" startTime="25000" endTime="30000"></Effect>
-        <Effect label="" startTime="30000" endTime="35000"></Effect>
-        <Effect label="" startTime="35000" endTime="40050"></Effect>
-        <Effect label="" startTime="40050" endTime="45050"></Effect>
-        <Effect label="" startTime="45050" endTime="50050"></Effect>
+        <Effect label="" startTime="100" endTime="4000"></Effect>
+        <Effect label="" startTime="4000" endTime="8000"></Effect>
+        <Effect label="" startTime="8000" endTime="12000"></Effect>
+        <Effect label="" startTime="12000" endTime="16000"></Effect>
+        <Effect label="" startTime="16000" endTime="20000"></Effect>
+        <Effect label="" startTime="20000" endTime="24000"></Effect>
+        <Effect label="" startTime="24000" endTime="28000"></Effect>
+        <Effect label="" startTime="28000" endTime="32000"></Effect>
+        <Effect label="" startTime="32000" endTime="36000"></Effect>
+        <Effect label="" startTime="36000" endTime="40000"></Effect>
+        <Effect label="" startTime="40000" endTime="44000"></Effect>
+        <Effect label="" startTime="44000" endTime="48000"></Effect>
       </EffectLayer>
     </Element>
     <Element type="model" name="Whole House">
@@ -302,36 +307,39 @@
     </Element>
     <Element type="model" name="House_Grid">
       <EffectLayer>
-        <Effect ref="13" name="Text" startTime="50050" endTime="61600" palette="3"/>
+        <Effect ref="13" name="Text" startTime="52000" endTime="61600" palette="3"/>
         <Effect ref="14" name="Text" id="1" startTime="62450" endTime="64000" palette="3"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="15" name="Text" startTime="0" endTime="50050" palette="6"/>
-        <Effect ref="16" name="Text" id="1" startTime="50050" endTime="61600" palette="3"/>
+        <Effect ref="15" name="Text" startTime="0" endTime="52000" palette="6"/>
+        <Effect ref="16" name="Text" id="1" startTime="52000" endTime="61600" palette="3"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="17" name="Text" startTime="0" endTime="5000" palette="3"/>
-        <Effect ref="18" name="Text" id="1" startTime="5000" endTime="10000" palette="3"/>
-        <Effect ref="19" name="Text" id="2" startTime="10000" endTime="15000" palette="3"/>
-        <Effect ref="20" name="Text" id="3" startTime="15000" endTime="20000" palette="3"/>
-        <Effect ref="21" name="Text" id="4" startTime="20000" endTime="25000" palette="3"/>
-        <Effect ref="22" name="Text" id="5" startTime="25000" endTime="30000" palette="3"/>
-        <Effect ref="23" name="Text" id="6" startTime="30000" endTime="35000" palette="3"/>
-        <Effect ref="24" name="Text" id="7" startTime="35000" endTime="40050" palette="3"/>
-        <Effect ref="25" name="Text" id="8" startTime="40050" endTime="45050" palette="3"/>
-        <Effect ref="26" name="Text" id="9" startTime="45050" endTime="50050" palette="3"/>
-        <Effect ref="27" name="Text" id="10" startTime="50050" endTime="61600" palette="6"/>
-        <Effect ref="28" name="Text" id="11" startTime="61950" endTime="64000" palette="6"/>
+        <Effect ref="17" name="Text" startTime="0" endTime="4000" palette="3"/>
+        <Effect ref="18" name="Text" id="1" startTime="4000" endTime="8000" palette="3"/>
+        <Effect ref="19" name="Text" id="2" startTime="8000" endTime="12000" palette="3"/>
+        <Effect ref="20" name="Text" id="3" startTime="12000" endTime="16000" palette="3"/>
+        <Effect ref="21" name="Text" id="4" startTime="16000" endTime="20000" palette="3"/>
+        <Effect ref="22" name="Text" id="5" startTime="20000" endTime="24000" palette="3"/>
+        <Effect ref="23" name="Text" id="6" startTime="24000" endTime="28000" palette="3"/>
+        <Effect ref="24" name="Text" id="7" startTime="28000" endTime="32000" palette="3"/>
+        <Effect ref="25" name="Text" id="8" startTime="32000" endTime="36000" palette="3"/>
+        <Effect ref="26" name="Text" id="9" startTime="36000" endTime="40000" palette="3"/>
+        <Effect ref="27" name="Text" id="10" startTime="40000" endTime="44000" palette="3"/>
+        <Effect ref="28" name="Text" id="11" startTime="44000" endTime="48000" palette="3"/>
+        <Effect ref="29" name="Text" id="12" startTime="48000" endTime="52000" palette="3"/>
+        <Effect ref="30" name="Text" id="13" startTime="52000" endTime="61600" palette="6"/>
+        <Effect ref="31" name="Text" id="14" startTime="61950" endTime="64000" palette="6"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="29" name="Text" startTime="0" endTime="48800" palette="7"/>
-        <Effect ref="30" name="Text" id="1" startTime="50050" endTime="61600" palette="6"/>
+        <Effect ref="32" name="Text" startTime="0" endTime="52000" palette="7"/>
+        <Effect ref="33" name="Text" id="1" startTime="52000" endTime="61600" palette="6"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="31" name="Text" startTime="50050" endTime="61600" palette="6"/>
+        <Effect ref="34" name="Text" selected="1" startTime="52000" endTime="61600" palette="6"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="32" name="Fireworks" selected="1" startTime="0" endTime="49650" palette="8"/>
+        <Effect ref="35" name="Fireworks" startTime="0" endTime="52000" palette="8"/>
       </EffectLayer>
       <EffectLayer>
         <Effect ref="3" name="Off" startTime="0" endTime="64000" palette="0"/>
@@ -372,19 +380,19 @@
     </Element>
     <Element type="model" name="MegaTree">
       <EffectLayer>
-        <Effect ref="33" name="Fire" startTime="0" endTime="61950" palette="1"/>
+        <Effect ref="36" name="Fire" startTime="0" endTime="61950" palette="1"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="34" name="Butterfly" startTime="0" endTime="61900" palette="8"/>
+        <Effect ref="37" name="Butterfly" startTime="0" endTime="61900" palette="8"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="35" name="Text" startTime="0" endTime="61950" palette="8"/>
+        <Effect ref="38" name="Text" startTime="0" endTime="61950" palette="8"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="36" name="Text" startTime="0" endTime="61950" palette="8"/>
+        <Effect ref="39" name="Text" startTime="0" endTime="61950" palette="8"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="37" name="Text" startTime="0" endTime="61950" palette="8"/>
+        <Effect ref="40" name="Text" startTime="0" endTime="61950" palette="8"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Bush 1">
@@ -428,7 +436,7 @@
     </Element>
     <Element type="model" name="AllMiniTreeStars">
       <EffectLayer>
-        <Effect ref="38" name="Fan" startTime="54100" endTime="61950" palette="9"/>
+        <Effect ref="41" name="Fan" startTime="54100" endTime="61950" palette="9"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="MiniTree1">
