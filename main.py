@@ -19,10 +19,16 @@ class MQTTClient:
         client.on_message = on_message
         self.namequeue = []
         client.message_callback_add("/christmas/personsName", self.on_name)
+        client.message_callback_add("/christmas/personsNameFront", self.on_name_front)
+        client.message_callback_add("/christmas/personsNameRemove", self.on_name_remove)
         client.message_callback_add("/christmas/currentSong", self.on_song)
         client.username_pw_set(config["username"], config["password"])
         client.connect(host=config["host"], port=config["port"])
         client.loop_start()
+
+    def publishQueue(self):
+        json_data = json.dumps(self.namequeue)
+        self.client.publish("/christmas/nameQueue", json_data)
 
     # The callback for Song 
     def on_song(self, client, userdata, msg):
@@ -37,6 +43,19 @@ class MQTTClient:
         if "HOUSEONC" in song:
             self.updateSong()
 
+    def on_name_front(self, client, userdata, msg):
+        name = msg.payload.decode('UTF-8').upper()
+        gen.logIt("Received Name for Front " + msg.topic+" "+ name)
+        self.namequeue.insert(0,name)
+        self.publishQueue()
+
+    def on_name_remove(self, client, userdata, msg):
+        name = msg.payload.decode('UTF-8').upper()
+        gen.logIt("Received Name for Remove " + msg.topic+" "+ name)
+        if name in self.namequeue:
+            self.namequeue.remove(name)
+        self.publishQueue()
+
     # The callback for Names
     def on_name(self, client, userdata, msg):
         name = msg.payload.decode('UTF-8').upper()
@@ -46,6 +65,7 @@ class MQTTClient:
         else:
             self.namequeue.append(name);
             gen.logIt('Adding to queue, size: ' + str(len(self.namequeue)))
+        self.publishQueue() 
 
     def updateSong(self):
         gen.logIt("----------------------------")
@@ -64,6 +84,7 @@ class MQTTClient:
         gen.genereateXml(use_me)
         gen.generateSeq()
         gen.sendSeq()
+        self.publishQueue() 
         gen.logIt("----------------------------")
         gen.logIt(datetime.datetime.now())
         gen.logIt("----------------------------")
@@ -73,6 +94,8 @@ class MQTTClient:
 def on_connect(client, userdata, flags, rc):
     gen.logIt("Connected with result code "+str(rc))
     client.subscribe("/christmas/personsName", 2)
+    client.subscribe("/christmas/personsNameFront", 2)
+    client.subscribe("/christmas/personsNameRemove", 2)
     client.subscribe("/christmas/currentSong", 2)
 
     # Subscribing in on_connect() means that if we lose the connection and
@@ -85,7 +108,7 @@ def on_message(client, userdata, msg):
 
 if __name__ == "__main__":
     client = MQTTClient()
-    client.updateSong()
+    #client.updateSong()
     while True:
         time.sleep(20) 
     
