@@ -111,4 +111,5 @@ if __name__ == "__main__":
     #client.updateSong()
     while True:
         time.sleep(20) 
+        client.publishQueue()
     
