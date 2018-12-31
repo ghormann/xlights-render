@@ -11,6 +11,12 @@ def logIt(msg):
 
 # Call with exact 10 names
 def genereateXml(names):
+	ts = datetime.datetime.today()
+	g1 = "Merry"
+	g2 = "Christmas"
+	if ts.month == 1 or (ts.month == 12 and ts.day > 26):
+		g1 = "Happy"
+		g2 = "New Year"
 	n1 = names.pop(0)
 	n2 = names.pop(0)
 	n3 = names.pop(0)
@@ -40,6 +46,8 @@ def genereateXml(names):
 				line = line.replace("%NAMEB%", nB)
 				line = line.replace("%NAMEC%", nC)
 				line = line.replace("%NAMED%", nD)
+				line = line.replace("%GREET1%", g1)
+				line = line.replace("%GREET2%", g2)
 				f_out.write(line)
 	logIt("XML Complete");
 
@@ -52,7 +60,7 @@ def sendSeq():
 	logIt("Rsync complete")
 
 if __name__ == "__main__":
-        baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE']
+        baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE', 'MARY', 'GREG', 'NANCY', 'JERRY', 'JIM', 'JEFF', 'ANGIE', 'DON', 'MAGGIE']
         genereateXml(baseNames)
         generateSeq()
         sendSeq()
