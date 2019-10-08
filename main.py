@@ -17,42 +17,45 @@ class MQTTClient:
         client.tls_set(ca_certs=config["ca_file"], tls_version=ssl.PROTOCOL_TLSv1_2)
         client.on_connect = on_connect
         client.on_message = on_message
+        self.status = "IDLE"
         self.namequeue = []
         self.namequeue_low = []
+        self.namequeue_ready = []
         client.message_callback_add("/christmas/personsName", self.on_name)
         client.message_callback_add("/christmas/personsNameFront", self.on_name_front)
         client.message_callback_add("/christmas/personsNameRemove", self.on_name_remove)
         client.message_callback_add("/christmas/personsNameLow", self.on_name_low)
-        client.message_callback_add("/christmas/currentSong", self.on_song)
+        client.message_callback_add("/christmas/nameAction", self.on_action)
         client.username_pw_set(config["username"], config["password"])
         client.connect(host=config["host"], port=config["port"])
         client.loop_start()
 
     def publishQueue(self):
-        json_data = json.dumps(self.namequeue)
-        self.client.publish("/christmas/nameQueue", json_data)
-
-        json_data = json.dumps(self.namequeue_low)
-        self.client.publish("/christmas/nameQueueLow", json_data)
+        full_queue = {}
+        full_queue["ready"] = self.namequeue_ready;
+        full_queue["low"] = self.namequeue_low;
+        full_queue["normal"] = self.namequeue;
+        full_queue["status"] = self.status;
+        json_data = json.dumps(full_queue)
+        rc = self.client.publish("/christmas/nameQueue", json_data)
 
     # The callback for Song 
-    def on_song(self, client, userdata, msg):
-        song = msg.payload.decode('UTF-8').upper()
-        gen.logIt("Received SOng " + msg.topic+" "+ song)
-        if "SUGAR_PLUM" in song:
-            self.updateSong()
-        if "HERECOMES" in song:
-            self.updateSong()
-        if "LITTLEDRUMMER" in song:
-            self.updateSong()
-        if "HOUSEONC" in song:
-            self.updateSong()
+    def on_action(self, client, userdata, msg):
+        action = msg.payload.decode('UTF-8').upper()
+        gen.logIt("Received Action " + msg.topic+" "+ action)
+        if "GENERATE" == action and "IDLE" == self.status:
+            self.status = "PENDING"
+        elif "RESET" == action and "READY" == self.status:
+            self.status = "IDLE"
+            self.namequeue_ready = []
+        else:
+            gen.logIt("ERROR: Invalid action " + msg.topic+" "+ action + " while in state " + self.status)
+
 
     def on_name_front(self, client, userdata, msg):
         name = msg.payload.decode('UTF-8').upper()
         gen.logIt("Received Name for Front " + msg.topic+" "+ name)
         self.namequeue.insert(0,name)
-        self.publishQueue()
 
     def on_name_remove(self, client, userdata, msg):
         name = msg.payload.decode('UTF-8').upper()
@@ -61,7 +64,6 @@ class MQTTClient:
             self.namequeue.remove(name)
         while name in self.namequeue_low:
             self.namequeue_low.remove(name)
-        self.publishQueue()
 
     # The callback for Names
     def on_name(self, client, userdata, msg):
@@ -72,7 +74,6 @@ class MQTTClient:
         else:
             self.namequeue.append(name);
             gen.logIt('Adding to queue, size: ' + str(len(self.namequeue)))
-        self.publishQueue() 
 
     # The callback for Names Low Priority
     def on_name_low(self, client, userdata, msg):
@@ -83,7 +84,9 @@ class MQTTClient:
         else:
             self.namequeue_low.append(name);
             gen.logIt('Adding to Low queue, size: ' + str(len(self.namequeue)))
-        self.publishQueue() 
+
+    def getStatus(self):
+        return self.status
 
     def updateSong(self):
         gen.logIt("----------------------------")
@@ -91,6 +94,11 @@ class MQTTClient:
         gen.logIt('Queue size: ' + str(len(self.namequeue)))
         gen.logIt('Queue size Low: ' + str(len(self.namequeue_low)))
         gen.logIt("----------------------------")
+
+        self.status = "GENERATING"
+        self.publishQueue() 
+        time.sleep(1)
+
         use_me = []
         extra = baseNames.copy()
         shuffle(extra)
@@ -102,10 +110,12 @@ class MQTTClient:
             else:
                 use_me.append(extra.pop(0))
         gen.logIt("Genereating with " + str(use_me))
+        self.namequeue_ready = use_me.copy()
         gen.genereateXml(use_me)
         gen.generateSeq()
         gen.sendSeq()
-        self.publishQueue() 
+        # Done
+        self.status = "READY"
         gen.logIt("----------------------------")
         gen.logIt(datetime.datetime.now())
         gen.logIt("----------------------------")
@@ -118,7 +128,7 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("/christmas/personsNameFront", 2)
     client.subscribe("/christmas/personsNameRemove", 2)
     client.subscribe("/christmas/personsNameLow", 2)
-    client.subscribe("/christmas/currentSong", 2)
+    client.subscribe("/christmas/nameAction", 2)
 
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
@@ -132,6 +142,9 @@ if __name__ == "__main__":
     client = MQTTClient()
     #client.updateSong()
     while True:
-        time.sleep(20) 
+        time.sleep(2) 
+        if ("PENDING" == client.getStatus()):
+           client.updateSong();
+
         client.publishQueue()
     
