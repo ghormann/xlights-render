@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <keybindings>
   <keybinding keycode="F10" alt="FALSE" control="FALSE" shift="FALSE" type="BACKUP"/>
-  <keybinding keycode="F11" alt="FALSE" control="FALSE" shift="FALSE" type="ALTERNATE_BACKUP"/>
+  <keybinding keycode="F11" alt="FALSE" control="FALSE" shift="TRUE" type="ALTERNATE_BACKUP"/>
   <keybinding keycode="F9" alt="FALSE" control="FALSE" shift="FALSE" type="SELECT_SHOW_FOLDER"/>
   <keybinding keycode="" alt="FALSE" control="FALSE" shift="FALSE" type="LIGHTS_TOGGLE"/>
   <keybinding keycode="o" alt="FALSE" control="TRUE" shift="FALSE" type="OPEN_SEQUENCE"/>
@@ -48,8 +48,8 @@
   <keybinding keycode="A" alt="FALSE" control="TRUE" shift="TRUE" type="INSERT_LAYER_BELOW"/>
   <keybinding keycode="X" alt="FALSE" control="TRUE" shift="TRUE" type="TOGGLE_ELEMENT_EXPAND"/>
   <keybinding keycode="F10" alt="FALSE" control="TRUE" shift="FALSE" type="SHOW_PRESETS"/>
-  <keybinding keycode="F11" alt="FALSE" control="TRUE" shift="FALSE" type="SEARCH_TOGGLE"/>
-  <keybinding keycode="F12" alt="FALSE" control="TRUE" shift="FALSE" type="PERSPECTIVES_TOGGLE"/>
+  <keybinding keycode="F11" alt="FALSE" control="TRUE" shift="TRUE" type="SEARCH_TOGGLE"/>
+  <keybinding keycode="F12" alt="FALSE" control="TRUE" shift="TRUE" type="PERSPECTIVES_TOGGLE"/>
   <keybinding keycode="l" alt="FALSE" control="TRUE" shift="FALSE" type="LOCK_MODEL"/>
   <keybinding keycode="u" alt="FALSE" control="TRUE" shift="FALSE" type="UNLOCK_MODEL"/>
   <keybinding keycode="g" alt="FALSE" control="TRUE" shift="FALSE" type="GROUP_MODELS"/>
@@ -84,4 +84,12 @@
   <keybinding keycode="F" alt="FALSE" control="FALSE" shift="TRUE" type="EFFECT" effect="Fan" xLightsVersion="2018.40"></keybinding>
   <keybinding keycode="A" alt="FALSE" control="TRUE" shift="TRUE" type="SELECT_ALL"/>
   <keybinding keycode="a" alt="FALSE" control="TRUE" shift="FALSE" type="SELECT_ALL_NO_TIMING"/>
+  <keybinding keycode="ESCAPE" alt="FALSE" control="FALSE" shift="FALSE" type="CANCEL_RENDER"/>
+  <keybinding keycode="" alt="FALSE" control="FALSE" shift="FALSE" type="EFFECT_UPDATE"/>
+  <keybinding keycode="" alt="FALSE" control="FALSE" shift="FALSE" type="COLOR_UPDATE"/>
+  <keybinding keycode="a" alt="FALSE" control="TRUE" shift="FALSE" type="SELECT_ALL_MODELS"/>
+  <keybinding keycode="F12" alt="FALSE" control="FALSE" shift="FALSE" type="FOCUS_SEQUENCER"/>
+  <keybinding keycode="" alt="FALSE" control="FALSE" shift="FALSE" type="TOGGLE_RENDER"/>
+  <keybinding keycode="" alt="FALSE" control="FALSE" shift="FALSE" type="PRESETS_TOGGLE"/>
+  <keybinding keycode="" alt="FALSE" control="FALSE" shift="FALSE" type="VALUECURVES_TOGGLE"/>
 </keybindings>
