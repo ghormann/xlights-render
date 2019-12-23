@@ -56,7 +56,7 @@ def generateSeq():
 	logIt("SEQ Complete");
 
 def sendSeq():
-	subprocess.call(["rsync", "-av", "--bwlimit=1200", "Wish_Name.fseq", "fpp@192.168.1.150:/home/fpp/media/sequences"])
+	subprocess.call(["rsync", "-av",  "Wish_Name.fseq", "fpp@192.168.1.150://mnt/greg/fpp/sequences"])
 	logIt("Rsync complete")
 
 if __name__ == "__main__":
