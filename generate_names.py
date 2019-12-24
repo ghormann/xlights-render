@@ -9,7 +9,25 @@ def logIt(msg):
 	print(str(datetime.datetime.now()) + ": " + str(msg) )
 	LOG.flush()
 
-# Call with exact 10 names
+# Call with a long string of names
+def genereateMidnightXml(nameString):
+	ts = datetime.datetime.today()
+	g1 = "Merry"
+	g2 = "Christmas"
+	if ts.month == 1 or (ts.month == 12 and ts.day > 26):
+		g1 = "Happy"
+		g2 = "New Year"
+	with open("name_list.txt", "w") as f_out:
+        	f_out.write(nameString)
+
+	with open("wish_long_name.xml", "w+") as f_out:
+		with open("wish_long_template.xml") as f:
+			for line in f:
+				f_out.write(line)
+
+	logIt("Midnight XML Complete");
+
+# Call with exact 13 names
 def genereateXml(names):
 	ts = datetime.datetime.today()
 	g1 = "Merry"
@@ -51,16 +69,28 @@ def genereateXml(names):
 				f_out.write(line)
 	logIt("XML Complete");
 
-def generateSeq():
-	subprocess.call(["xLights", "-r", "Wish_Name.xml"])
-	logIt("SEQ Complete");
+def getFileName(midnight, isSeq):
+	name = "Wish_Name.xml"
+	if midnight:
+		name = "wish_long_name.xml"
 
-def sendSeq():
-	subprocess.call(["rsync", "-av",  "Wish_Name.fseq", "fpp@192.168.1.150://mnt/greg/fpp/sequences"])
-	logIt("Rsync complete")
+	if isSeq:
+		name = name.replace(".xml", ".fseq")
+	return name
+
+def generateSeq(midnight = False):
+	name = getFileName(midnight, False)
+	subprocess.call(["xLights", "-r", name])
+	logIt("SEQ Complete " + name);
+
+def sendSeq(midnight = False):
+	name = getFileName(midnight, True)
+	subprocess.call(["rsync", "-av",  name, "fpp@192.168.1.150://mnt/greg/fpp/sequences"])
+	logIt("Rsync complete: " + name)
 
 if __name__ == "__main__":
         baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE', 'MARY', 'GREG', 'NANCY', 'JERRY', 'JIM', 'JEFF', 'ANGIE', 'DON', 'MAGGIE']
-        genereateXml(baseNames)
-        generateSeq()
-        sendSeq()
+        #genereateXml(baseNames)
+        genereateMidnightXml("This is a test.   It is only a test")
+        generateSeq(True)
+        sendSeq(True)
