@@ -45,8 +45,8 @@ class MQTTClient:
 			gen.logIt('Name already in midnight queue')
 		else:
 			self.midnight_names.insert(0,name)
-		if len(self.midnight_names) > 200:
-			del self.midnight_names[200:]
+		if len(self.midnight_names) > 150:
+			del self.midnight_names[150:]
 
 	# The callback for Song 
 	def on_action(self, client, userdata, msg):
