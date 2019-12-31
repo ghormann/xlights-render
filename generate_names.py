@@ -23,6 +23,8 @@ def genereateMidnightXml(nameString):
 	with open("wish_long_name.xml", "w+") as f_out:
 		with open("wish_long_template.xml") as f:
 			for line in f:
+				line = line.replace("%GREET1%", g1)
+				line = line.replace("%GREET2%", g2)
 				f_out.write(line)
 
 	logIt("Midnight XML Complete");
