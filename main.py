@@ -14,7 +14,7 @@ class MQTTClient:
 		config = json.load(open('greglights_config.json'))
 		client = paho.Client()
 		self.client = client
-		client.tls_set(ca_certs=config["ca_file"], tls_version=ssl.PROTOCOL_TLSv1_2)
+		#client.tls_set(ca_certs=config["ca_file"], tls_version=ssl.PROTOCOL_TLSv-1_2)
 		client.on_connect = on_connect
 		client.on_message = on_message
 		self.status = "IDLE"
