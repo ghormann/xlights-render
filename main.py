@@ -8,6 +8,17 @@ import generate_names as gen
 
 baseNames = ['JEFF', 'BRADY','MARY', 'NANCY','JERRY', 'HENERY', 'ALEX', 'TIM', 'ABBIE','MELISSA', 'JUDY', 'BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE']
 
+epoch = datetime.datetime.utcfromtimestamp(0)
+
+def unix_ts(dt):
+	return (dt - epoch).total_seconds()
+
+def json_serial(obj):
+	"""JSON serializer for objects not serializable by default json code"""
+	if isinstance(obj, (datetime.datetime, datetime.date)):
+		return obj.isoformat()
+	raise TypeError ("Type %s not serializable" % type(obj))
+
 class MQTTClient:
 	"""Very simple MQTTClient for listening to names to be displayed on Grid"""
 	def __init__(self):
@@ -37,7 +48,7 @@ class MQTTClient:
 		full_queue["low"] = self.namequeue_low;
 		full_queue["normal"] = self.namequeue;
 		full_queue["status"] = self.status;
-		json_data = json.dumps(full_queue)
+		json_data = json.dumps(full_queue, default=json_serial)
 		rc = self.client.publish("/christmas/nameQueue", json_data)
 
 	def insert_midnight_name(self, name):
@@ -66,40 +77,58 @@ class MQTTClient:
 
 
 	def on_name_front(self, client, userdata, msg):
-		name = msg.payload.decode('UTF-8').upper()
-		gen.logIt("Received Name for Front " + msg.topic+" "+ name)
-		self.namequeue.insert(0,name)
-		self.insert_midnight_name(name)
+		data = json.loads(msg.payload.decode('UTF-8'))
+		gen.logIt("Received Name for Front " + msg.topic+" "+ data['name'])
+		self.namequeue.insert(0,data)
+		self.insert_midnight_name(data['name'])
 
 	def on_name_remove(self, client, userdata, msg):
-		name = msg.payload.decode('UTF-8').upper()
+		data = json.loads(msg.payload.decode('UTF-8'))
+		name = data['name']
 		gen.logIt("Received Name for Remove " + msg.topic+" "+ name)
-		while name in self.namequeue:
-			self.namequeue.remove(name)
-		while name in self.namequeue_low:
-			self.namequeue_low.remove(name)
+		for i, obj in enumerate(self.namequeue):
+			if obj['name'] == name:
+				del self.namequeue[i]
+				break;
+		for i, obj in enumerate(self.namequeue_low):
+			if obj['name'] == name:
+				del self.namequeue_low[i]
+				break;
 
 	# The callback for Names
 	def on_name(self, client, userdata, msg):
-		name = msg.payload.decode('UTF-8').upper()
+		data = json.loads(msg.payload.decode('UTF-8'))
+		name = data['name']
 		self.insert_midnight_name(name)
 		gen.logIt("Received Name " + msg.topic+" "+ name)
-		if name in self.namequeue:
+		found = False
+		for obj in self.namequeue:
+			if obj['name'] == name:
+				found=True
+				break;
+		if found:
 			gen.logIt('Name already in queue')
 		else:
-			self.namequeue.append(name);
+			self.namequeue.append(data);
 			gen.logIt('Adding to queue, size: ' + str(len(self.namequeue)))
 
 	# The callback for Names Low Priority
 	def on_name_low(self, client, userdata, msg):
-		name = msg.payload.decode('UTF-8').upper()
-		gen.logIt("Received Low Priroity Name " + msg.topic+" "+ name)
+		data = json.loads(msg.payload.decode('UTF-8'))
+		name = data['name']
 		self.insert_midnight_name(name)
-		if name in self.namequeue_low:
-			gen.logIt('Name already in Low queue')
+		gen.logIt("Received Name " + msg.topic+" "+ name)
+		found = False
+		for obj in self.namequeue_low:
+			if obj['name'] == name:
+				found=True
+				break;
+		if found:
+			gen.logIt('Name already in queue')
 		else:
-			self.namequeue_low.append(name);
-			gen.logIt('Adding to Low queue, size: ' + str(len(self.namequeue)))
+			self.namequeue_low.append(data);
+			gen.logIt('Adding to queue, size: ' + str(len(self.namequeue_low)))
+
 
 	def getStatus(self):
 		return self.status
@@ -122,18 +151,28 @@ class MQTTClient:
 			gen.genereateMidnightXml(all)
 		else:
 			use_me = []
+			use_me_names = []
 			extra = baseNames.copy()
 			shuffle(extra)
 			while len(use_me) < 13:
 				if (len(self.namequeue) > 0):
-					use_me.append(self.namequeue.pop(0))
+					obj = self.namequeue.pop(0)
+					use_me.append(obj)
+					use_me_names.append(obj['name'])
 				elif (len(self.namequeue_low) > 0):
-					use_me.append(self.namequeue_low.pop(0))
+					obj = self.namequeue_low.pop(0)
+					use_me.append(obj)
+					use_me_names.append(obj['name'])
 				else:
-					use_me.append(extra.pop(0))
-			gen.logIt("Genereating with " + str(use_me))
+					obj = {}
+					obj['name'] = extra.pop(0)
+					obj['ts'] = unix_ts(datetime.datetime.utcnow())
+					obj['from'] = 'System'
+					use_me.append(obj)
+					use_me_names.append(obj['name'])
+			gen.logIt("Genereating with " + str(use_me_names))
 			self.namequeue_ready = use_me.copy()
-			gen.genereateXml(use_me)
+			gen.genereateXml(use_me_names)
 		gen.generateSeq(midnight)
 		gen.sendSeq(midnight)
 		# Done
