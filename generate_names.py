@@ -87,8 +87,13 @@ def generateSeq(midnight = False):
 
 def sendSeq(midnight = False):
 	name = getFileName(midnight, True)
-	subprocess.call(["rsync", "-av",  name, "fpp@192.168.1.150://mnt/greg/fpp/sequences"])
-	logIt("Rsync complete: " + name)
+	url = "http://192.168.1.150/api/sequence/" + name
+	localname = "@" + name;
+	parts = ["/usr/bin/curl", "-X", "POST", "--data-binary",  localname, url]
+	#subprocess.call(["rsync", "-av",  name, "fpp@192.168.1.150://mnt/greg/fpp/sequences"])
+	logIt(" ".join(parts))
+	subprocess.call(parts)
+	logIt("Rsync complete")
 
 if __name__ == "__main__":
         baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE', 'MARY', 'GREG', 'NANCY', 'JERRY', 'JIM', 'JEFF', 'ANGIE', 'DON', 'MAGGIE']
