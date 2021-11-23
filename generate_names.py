@@ -12,6 +12,8 @@ def logIt(msg):
 def generateBirthday(nameString):
 	filename = "Happy_Birthday_name.xsq"
 	seqName = "Happy_Birthday_name.fseq"
+	g1="Happy Birthday"
+	g2="Happy Birthday"
 	with open("name_list.txt", "w") as f_out:
         	f_out.write(nameString)
 

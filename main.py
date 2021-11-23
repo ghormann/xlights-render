@@ -143,8 +143,8 @@ class MQTTClient:
 	def getStatus(self):
 		return self.status
 
-	def genBirthday(self);
-		gen.genereateBirthday(self.birthday)
+	def genBirthday(self):
+		gen.generateBirthday(self.birthday)
 		self.birthday = "";
 
 	def updateSong(self, midnight = False):
@@ -206,6 +206,7 @@ def on_connect(client, userdata, flags, rc):
 	client.subscribe("/christmas/personsNameRemove", 2)
 	client.subscribe("/christmas/personsNameLow", 2)
 	client.subscribe("/christmas/nameAction", 2)
+	client.subscribe("/christmas/nameBirthday", 2)
 
 	# Subscribing in on_connect() means that if we lose the connection and
 	# reconnect then subscriptions will be renewed.
@@ -225,7 +226,7 @@ if __name__ == "__main__":
 		if ("PENDING_MIDNIGHT" == client.getStatus()):
 			client.updateSong(True);
 		if ("" != client.getBirthday()):
-			client.genBirthday(client.getBirthday());
+			client.genBirthday();
 
 
 		client.publishQueue()
