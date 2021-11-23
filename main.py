@@ -29,6 +29,7 @@ class MQTTClient:
 		client.on_connect = on_connect
 		client.on_message = on_message
 		self.status = "IDLE"
+		self.birthday = ""
 		self.namequeue = []
 		self.namequeue_low = []
 		self.namequeue_ready = []
@@ -38,6 +39,7 @@ class MQTTClient:
 		client.message_callback_add("/christmas/personsNameRemove", self.on_name_remove)
 		client.message_callback_add("/christmas/personsNameLow", self.on_name_low)
 		client.message_callback_add("/christmas/nameAction", self.on_action)
+		client.message_callback_add("/christmas/nameBirthday", self.on_birthday)
 		client.username_pw_set(config["username"], config["password"])
 		client.connect(host=config["host"], port=config["port"])
 		client.loop_start()
@@ -58,6 +60,12 @@ class MQTTClient:
 			self.midnight_names.insert(0,name)
 		if len(self.midnight_names) > 150:
 			del self.midnight_names[150:]
+
+	# The callback for Song 
+	def on_birthday(self, client, userdata, msg):
+		name = msg.payload.decode('UTF-8').upper()
+		gen.logIt("Received Birthday " + msg.topic+" "+ name)
+		self.birthday = name
 
 	# The callback for Song 
 	def on_action(self, client, userdata, msg):
@@ -129,9 +137,15 @@ class MQTTClient:
 			self.namequeue_low.append(data);
 			gen.logIt('Adding to queue, size: ' + str(len(self.namequeue_low)))
 
+	def getBirthday(self):
+		return self.birthday
 
 	def getStatus(self):
 		return self.status
+
+	def genBirthday(self);
+		gen.genereateBirthday(self.birthday)
+		self.birthday = "";
 
 	def updateSong(self, midnight = False):
 		gen.logIt("----------------------------")
@@ -210,6 +224,9 @@ if __name__ == "__main__":
 			client.updateSong();
 		if ("PENDING_MIDNIGHT" == client.getStatus()):
 			client.updateSong(True);
+		if ("" != client.getBirthday()):
+			client.genBirthday(client.getBirthday());
+
 
 		client.publishQueue()
     

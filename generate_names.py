@@ -9,6 +9,22 @@ def logIt(msg):
 	print(str(datetime.datetime.now()) + ": " + str(msg) )
 	LOG.flush()
 
+def generateBirthday(nameString):
+	filename = "Happy_Birthday_name.xsq"
+	seqName = "Happy_Birthday_name.fseq"
+	with open("name_list.txt", "w") as f_out:
+        	f_out.write(nameString)
+
+	with open(filename, "w+") as f_out:
+		with open("Happy_Birthday_Name_Template.xsq") as f:
+			for line in f:
+				line = line.replace("%GREET1%", g1)
+				line = line.replace("%GREET2%", g2)
+				f_out.write(line)
+	# Run xLights
+	subprocess.call(["xLights", "-r", filename])
+	sendSeqName(seqName)
+
 # Call with a long string of names
 def genereateMidnightXml(nameString):
 	ts = datetime.datetime.today()
@@ -20,7 +36,7 @@ def genereateMidnightXml(nameString):
 	with open("name_list.txt", "w") as f_out:
         	f_out.write(nameString)
 
-	with open("wish_long_name.xml", "w+") as f_out:
+	with open("wish_long_names.xml", "w+") as f_out:
 		with open("wish_long_template.xml") as f:
 			for line in f:
 				line = line.replace("%GREET1%", g1)
@@ -85,15 +101,17 @@ def generateSeq(midnight = False):
 	subprocess.call(["xLights", "-r", name])
 	logIt("SEQ Complete " + name);
 
-def sendSeq(midnight = False):
-	name = getFileName(midnight, True)
+def sendSeqName(name):
 	url = "http://192.168.1.150/api/sequence/" + name
 	localname = "@" + name;
 	parts = ["/usr/bin/curl", "-X", "POST", "--data-binary",  localname, url]
-	#subprocess.call(["rsync", "-av",  name, "fpp@192.168.1.150://mnt/greg/fpp/sequences"])
 	logIt(" ".join(parts))
 	subprocess.call(parts)
-	logIt("Rsync complete")
+	logIt("Upload complete")
+
+def sendSeq(midnight = False):
+	name = getFileName(midnight, True)
+	sendSeqName(name)
 
 if __name__ == "__main__":
         baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE', 'MARY', 'GREG', 'NANCY', 'JERRY', 'JIM', 'JEFF', 'ANGIE', 'DON', 'MAGGIE']
