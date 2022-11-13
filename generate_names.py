@@ -104,12 +104,13 @@ def generateSeq(midnight = False):
 	logIt("SEQ Complete " + name);
 
 def sendSeqName(name):
-	url = "http://192.168.1.150/api/sequence/" + name
-	localname = "@" + name;
-	parts = ["/usr/bin/curl", "-X", "POST", "--data-binary",  localname, url]
-	logIt(" ".join(parts))
-	subprocess.call(parts)
-	logIt("Upload complete")
+	for ip in ["192.168.1.150", "192.168.1.156"]:
+		url = f"http://{ip}/api/sequence/{name}"
+		localname = "@" + name;
+		parts = ["/usr/bin/curl", "-X", "POST", "--data-binary",  localname, url]
+		logIt(" ".join(parts))
+		subprocess.call(parts)
+		logIt(f"Upload complete - {ip}")
 
 def sendSeq(midnight = False):
 	name = getFileName(midnight, True)
