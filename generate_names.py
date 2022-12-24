@@ -35,6 +35,7 @@ def genereateMidnightXml(nameString):
 	if ts.month == 1 or (ts.month == 12 and ts.day > 26):
 		g1 = "Happy"
 		g2 = "New Year"
+	logIt(f"Genereating Midnight with {g1} {g2}")
 	with open("name_list.txt", "w") as f_out:
         	f_out.write(nameString)
 
