@@ -39,7 +39,7 @@ def genereateMidnightXml(nameString):
 	with open("name_list.txt", "w") as f_out:
         	f_out.write(nameString)
 
-	with open("wish_long_names.xml", "w+") as f_out:
+	with open("wish_long_name.xml", "w+") as f_out:
 		with open("wish_long_template.xml") as f:
 			for line in f:
 				line = line.replace("%GREET1%", g1)
