@@ -23,7 +23,7 @@ class MQTTClient:
 	"""Very simple MQTTClient for listening to names to be displayed on Grid"""
 	def __init__(self):
 		config = json.load(open('greglights_config.json'))
-		client = paho.Client()
+		client = paho.Client(paho.CallbackAPIVersion.VERSION1)
 		self.client = client
 		#client.tls_set(ca_certs=config["ca_file"], tls_version=ssl.PROTOCOL_TLSv-1_2)
 		client.on_connect = on_connect
