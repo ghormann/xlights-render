@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2019.55</version>
-    <author/>
-    <author-email/>
-    <author-website/>
-    <song/>
-    <artist/>
-    <album/>
-    <MusicURL/>
-    <comment/>
+    <version>2024.16.2</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song></song>
+    <artist></artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment></comment>
     <sequenceTiming>50 ms</sequenceTiming>
     <sequenceType>Media</sequenceType>
     <mediaFile>/home/ghormann/xlightsData/media/Wish_Long_192.mp3</mediaFile>
@@ -28,9 +28,9 @@
   <EffectDB>
     <Effect>E_CHECKBOX_Circles_Bounce=1,E_CHECKBOX_Circles_Bubbles=0,E_CHECKBOX_Circles_Collide=0,E_CHECKBOX_Circles_Linear_Fade=0,E_CHECKBOX_Circles_Plasma=1,E_CHECKBOX_Circles_Radial=0,E_CHECKBOX_Circles_Radial_3D=0,E_CHECKBOX_Circles_Random_m=0,E_SLIDER_Circles_Count=10,E_SLIDER_Circles_Size=10,E_SLIDER_Circles_Speed=10,T_TEXTCTRL_Fadein=1</Effect>
     <Effect>E_CHECKBOX_FIRETIMING=1,E_CHECKBOX_Fireworks_Gravity=1,E_CHECKBOX_Fireworks_HoldColour=1,E_CHECKBOX_Fireworks_UseMusic=0,E_CHOICE_FIRETIMINGTRACK=fireworks,E_SLIDER_Fireworks_Count=100,E_SLIDER_Fireworks_Fade=100,E_SLIDER_Fireworks_Velocity=5,E_SLIDER_Fireworks_XLocation=-1,E_SLIDER_Fireworks_XVelocity=0,E_SLIDER_Fireworks_YLocation=-1,E_SLIDER_Fireworks_YVelocity=0,E_TEXTCTRL_Fireworks_XLocation=-1,E_TEXTCTRL_Fireworks_XVelocity=0,E_TEXTCTRL_Fireworks_YLocation=-1,E_TEXTCTRL_Fireworks_YVelocity=0</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=10-12x12 Bold,E_FONTPICKER_Text_Font=Ubuntu 11,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=41,E_TEXTCTRL_Text=%GREET1%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=1</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=10-12x12 Bold,E_FONTPICKER_Text_Font=Ubuntu 11,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%GREET2%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=1</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=left,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=10-12x12 Bold,E_FILEPICKERCTRL_Text_File=/home/ghormann/xlightsData/name_list.txt,E_FONTPICKER_Text_Font='segoe ui',E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-35,E_TEXTCTRL_Text_Speed=30,T_TEXTCTRL_Fadein=1</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=10-12x12 Bold,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 11,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=41,E_TEXTCTRL_Text=%GREET1%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=1</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=10-12x12 Bold,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 11,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%GREET2%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=1</Effect>
+    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=left,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=10-12x12 Bold,E_FILEPICKERCTRL_Text_File=C:\Users\ghorm\Documents\xlights\Test_show_directory\name_list.txt,E_FONTPICKER_Text_Font='segoe ui',E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-35,E_TEXTCTRL_Text_Speed=30,T_TEXTCTRL_Fadein=1</Effect>
   </EffectDB>
   <DataLayers>
     <DataLayer lor_params="7471201" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
@@ -75,7 +75,7 @@
         <Effect ref="2" name="Text" startTime="1100" endTime="124650" palette="2"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="3" name="Text" selected="1" startTime="1100" endTime="124650" palette="3"/>
+        <Effect ref="3" name="Text" startTime="1100" endTime="124650" palette="3"/>
       </EffectLayer>
       <EffectLayer>
         <Effect ref="4" name="Text" startTime="1100" endTime="124650" palette="4"/>
