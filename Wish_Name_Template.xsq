@@ -24,10 +24,12 @@
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette4=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette3=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#00FF40,C_BUTTON_Palette3=Active=TRUE|Id=ID_BUTTON_Palette3|Values=x=0.000^c=#ff0000;x=1.000^c=#00ff00|,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=Active=TRUE|Id=ID_BUTTON_Palette3|Timecurve=1|Values=x=0.000^c=#ff0000;x=1.000^c=#00ff00|,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette3=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette4=1,C_CHECKBOX_Palette5=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette4=1</ColorPalette>
-    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette8=1</ColorPalette>
   </ColorPalettes>
@@ -41,20 +43,22 @@
     <Effect>E_CHECKBOX_Chase_Group_All=0,E_CHOICE_Chase_Type1=Right-Left,E_CHOICE_Fade_Type=None,E_CHOICE_SingleStrand_Colors=Palette,E_CHOICE_Skips_Direction=Left,E_NOTEBOOK_SSEFFECT_TYPE=Chase,E_SLIDER_Color_Mix1=10,E_SLIDER_Number_Chases=1,E_SLIDER_Skips_Advance=0,E_SLIDER_Skips_BandSize=1,E_SLIDER_Skips_SkipSize=1,E_SLIDER_Skips_StartPos=1,E_TEXTCTRL_Chase_Rotations=1,E_VALUECURVE_Chase_Rotations=Active=FALSE|,E_VALUECURVE_Color_Mix1=Active=FALSE|,E_VALUECURVE_Number_Chases=Active=FALSE|,T_CHOICE_LayerMethod=1 is Unmask,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHOICE_Butterfly_Colors=Rainbow,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=5,E_SLIDER_Butterfly_Style=1,T_CHOICE_LayerMethod=1 is Unmask,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHECKBOX_Morph_End_Link=0,E_CHECKBOX_Morph_Start_Link=0,E_CHECKBOX_ShowHeadAtStart=0,E_NOTEBOOK_Morph=Start,E_SLIDER_MorphAccel=0,E_SLIDER_MorphDuration=20,E_SLIDER_MorphEndLength=1,E_SLIDER_MorphStartLength=1,E_SLIDER_Morph_End_X1=0,E_SLIDER_Morph_End_X2=100,E_SLIDER_Morph_End_Y1=100,E_SLIDER_Morph_End_Y2=100,E_SLIDER_Morph_Repeat_Count=0,E_SLIDER_Morph_Repeat_Skip=1,E_SLIDER_Morph_Stagger=0,E_SLIDER_Morph_Start_X1=0,E_SLIDER_Morph_Start_X2=100,E_SLIDER_Morph_Start_Y1=0,E_SLIDER_Morph_Start_Y2=0,E_VALUECURVE_MorphAccel=Active=FALSE|,E_VALUECURVE_MorphDuration=Active=FALSE|,E_VALUECURVE_MorphEndLength=Active=FALSE|,E_VALUECURVE_MorphStartLength=Active=FALSE|,E_VALUECURVE_Morph_End_X1=Active=FALSE|,E_VALUECURVE_Morph_End_X2=Active=FALSE|,E_VALUECURVE_Morph_End_Y1=Active=FALSE|,E_VALUECURVE_Morph_End_Y2=Active=FALSE|,E_VALUECURVE_Morph_Repeat_Count=Active=FALSE|,E_VALUECURVE_Morph_Repeat_Skip=Active=FALSE|,E_VALUECURVE_Morph_Stagger=Active=FALSE|,E_VALUECURVE_Morph_Start_X1=Active=FALSE|,E_VALUECURVE_Morph_Start_X2=Active=FALSE|,E_VALUECURVE_Morph_Start_Y1=Active=FALSE|,E_VALUECURVE_Morph_Start_Y2=Active=FALSE|,T_CHOICE_LayerMethod=1 is Unmask,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\Fly Through.fs,E_SLIDER_SHADERXYZZY_c0=0,E_SLIDER_SHADERXYZZY_c1=0,E_SLIDER_SHADERXYZZY_c2=0,E_SLIDER_SHADERXYZZY_j=50,E_SLIDER_SHADERXYZZY_k=50,E_SLIDER_Shader_Speed=100,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>E_CHOICE_Warp_Treatment_APPLYLAST=constant,E_CHOICE_Warp_Type=ripple,E_SLIDER_Warp_Cycle_Count=1,E_SLIDER_Warp_Frequency=20,E_SLIDER_Warp_Speed=20,E_SLIDER_Warp_X=50,E_SLIDER_Warp_Y=50,E_TEXTCTRL1=The warp effect distorts the pixels in the layers below it. The Canvas option in Layer Blending must be enabled for it to work.,E_TEXTCTRL_Warp_Cycle_Count=1,E_TEXTCTRL_Warp_Frequency=20,E_TEXTCTRL_Warp_Speed=20,E_TEXTCTRL_Warp_X=50,E_TEXTCTRL_Warp_Y=50,E_VALUECURVE_Warp_X=Active=TRUE|Id=ID_VALUECURVE_Warp_X|Min=0.00|Max=100.00|P1=50.00|RV=TRUE|,E_VALUECURVE_Warp_Y=Active=TRUE|Id=ID_VALUECURVE_Warp_Y|Min=0.00|Max=100.00|P1=50.00|RV=TRUE|,T_CHECKBOX_Canvas=1</Effect>
-    <Effect>E_CHOICE_Butterfly_Colors=Rainbow,E_CHOICE_Butterfly_Direction=Reverse,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=1,E_SLIDER_Butterfly_Style=1,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>E_CHECKBOX_Fan_Blend_Edges=1,E_CHECKBOX_Fan_Reverse=0,E_CHECKBOX_Fan_Scale=0,E_NOTEBOOK_Fan=Blades,E_SLIDER_Fan_Accel=0,E_SLIDER_Fan_Blade_Angle=251,E_SLIDER_Fan_Blade_Width=100,E_SLIDER_Fan_Duration=100,E_SLIDER_Fan_Element_Width=100,E_SLIDER_Fan_End_Radius=695,E_SLIDER_Fan_Num_Blades=3,E_SLIDER_Fan_Num_Elements=1,E_SLIDER_Fan_Revolutions=724,E_SLIDER_Fan_Start_Angle=0,E_SLIDER_Fan_Start_Radius=1,E_VALUECURVE_Fan_CenterX=Active=TRUE|Id=ID_VALUECURVE_Fan_CenterX|Type=Ramp|Min=0.00|Max=100.00|P1=100.00|RV=TRUE|,E_VALUECURVE_Fan_CenterY=Active=TRUE|Id=ID_VALUECURVE_Fan_CenterY|Type=Ramp|Min=0.00|Max=100.00|P2=100.00|RV=TRUE|,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\Fly Through.fs,E_SLIDER_SHADERXYZZY_c0=0,E_SLIDER_SHADERXYZZY_c1=0,E_SLIDER_SHADERXYZZY_c2=0,E_SLIDER_SHADERXYZZY_j=50,E_SLIDER_SHADERXYZZY_k=50,E_SLIDER_Shader_Speed=43,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\InnerDimensionalMatrix.fs,E_CHECKBOX_SHADERXYZZY_color=0,E_CHECKBOX_SHADERXYZZY_mirror=0,E_SLIDER_SHADERXYZZY_cycle=100,E_SLIDER_SHADERXYZZY_flash=750,E_SLIDER_SHADERXYZZY_line=36,E_SLIDER_SHADERXYZZY_rate=100,E_SLIDER_SHADERXYZZY_scale=100,E_SLIDER_SHADERXYZZY_seed1=15500,E_SLIDER_SHADERXYZZY_seed2=64900,E_SLIDER_SHADERXYZZY_zoom=17,E_SLIDER_Shader_Speed=65,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_CHECKBOX_Canvas=1,T_CHOICE_LayerMethod=Brightness,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\Hex Vortex.fs,E_SLIDER_SHADERXYZZY_B=25,E_SLIDER_SHADERXYZZY_G=12,E_SLIDER_SHADERXYZZY_R=5,E_SLIDER_SHADERXYZZY_centerX=50,E_SLIDER_SHADERXYZZY_centerY=50,E_SLIDER_SHADERXYZZY_rotation=5,E_SLIDER_SHADERXYZZY_shapeX=200,E_SLIDER_SHADERXYZZY_shapeY=225,E_SLIDER_SHADERXYZZY_speed=50,E_SLIDER_Shader_Speed=20,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_CHECKBOX_Canvas=1,T_CHOICE_LayerMethod=Brightness,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\Hex Play.fs,E_CHECKBOX_SHADERXYZZY_uContRot=1,E_CHOICE_SHADERXYZZY_uColMode=Shader Defaults ,E_SLIDER_SHADERXYZZY_uIntensity=100,E_SLIDER_SHADERXYZZY_uOffsetX=0,E_SLIDER_SHADERXYZZY_uOffsetY=0,E_SLIDER_SHADERXYZZY_uRotate=107,E_SLIDER_SHADERXYZZY_uZoom=100,E_SLIDER_Shader_Speed=100,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_CHOICE_LayerMethod=1 is True Unmask,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\Liquid Fire.fs,E_SLIDER_SHADERXYZZY_offsetX=-100,E_SLIDER_SHADERXYZZY_offsetY=-100,E_SLIDER_SHADERXYZZY_rate=200,E_SLIDER_Shader_Speed=100,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\6mm Inversion.fs,E_SLIDER_SHADERXYZZY_CX=200,E_SLIDER_SHADERXYZZY_CY=-200,E_SLIDER_Shader_Speed=100,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_CHOICE_LayerMethod=1 is Unmask,T_TEXTCTRL_Fadein=0.5,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\Mobius Spiral.fs,E_SLIDER_SHADERXYZZY_mx=75,E_SLIDER_SHADERXYZZY_rate=100,E_SLIDER_Shader_Speed=100,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_0FILEPICKERCTRL_IFS=C:\Users\ghorm\Documents\xlights\Test_show_directory\Shaders\Mobius Spiral.fs,E_SLIDER_SHADERXYZZY_mx=75,E_SLIDER_SHADERXYZZY_rate=33,E_SLIDER_Shader_Speed=100,E_TEXTCTRL_Shader_LeadIn=0,E_TEXTCTRL_Shader_Offset_X=0,E_TEXTCTRL_Shader_Offset_Y=0,E_TEXTCTRL_Shader_Zoom=0,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 28 windows-1252,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%GREET1% %GREET2%,E_TEXTCTRL_Text_Speed=10,T_CHOICE_LayerMethod=1 is True Unmask</Effect>
     <Effect></Effect>
+    <Effect>T_TEXTCTRL_Fadeout=1.5</Effect>
     <Effect>E_CHECKBOX_Fan_Blend_Edges=1,E_CHECKBOX_Fan_Reverse=0,E_NOTEBOOK_Fan=Position,E_SLIDER_Fan_Accel=0,E_SLIDER_Fan_Blade_Angle=90,E_SLIDER_Fan_Blade_Width=100,E_SLIDER_Fan_CenterX=58,E_SLIDER_Fan_CenterY=32,E_SLIDER_Fan_Duration=100,E_SLIDER_Fan_Element_Width=100,E_SLIDER_Fan_End_Radius=266,E_SLIDER_Fan_Num_Blades=2,E_SLIDER_Fan_Num_Elements=1,E_SLIDER_Fan_Revolutions=720,E_SLIDER_Fan_Start_Angle=0,E_SLIDER_Fan_Start_Radius=1,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>B_CHOICE_BufferStyle=Per Model Default,E_CHECKBOX_Fan_Blend_Edges=1,E_CHECKBOX_Fan_Reverse=0,E_CHECKBOX_Fan_Scale=0,E_NOTEBOOK_Fan=Position,E_SLIDER_Fan_Accel=0,E_SLIDER_Fan_Blade_Angle=90,E_SLIDER_Fan_Blade_Width=100,E_SLIDER_Fan_CenterX=58,E_SLIDER_Fan_CenterY=32,E_SLIDER_Fan_Duration=100,E_SLIDER_Fan_Element_Width=100,E_SLIDER_Fan_End_Radius=266,E_SLIDER_Fan_Num_Blades=2,E_SLIDER_Fan_Num_Elements=1,E_SLIDER_Fan_Revolutions=720,E_SLIDER_Fan_Start_Angle=0,E_SLIDER_Fan_Start_Radius=1,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=41,E_TEXTCTRL_Text=Names updated,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 16,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-20,E_TEXTCTRL_Text=%GREET2%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 12 windows-1252,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=41,E_TEXTCTRL_Text=Names updated,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 16,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-20,E_TEXTCTRL_Text=%GREET2%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=36,E_TEXTCTRL_Text=%GREET1% %GREET2%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=19,E_TEXTCTRL_Text=here every 10 min.,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 12 windows-1252,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=19,E_TEXTCTRL_Text=here every 10 min.,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAME1%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAME2%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAME3%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
@@ -68,11 +72,11 @@
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAMEB%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAMEC%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=0,E_TEXTCTRL_Text=%NAMED%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-6,E_TEXTCTRL_Text=Under the clock,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 16,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=20,E_TEXTCTRL_Text=%GREET1%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadeout=0.5</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 12 windows-1252,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-6,E_TEXTCTRL_Text=Under the clock,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 16,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=20,E_TEXTCTRL_Text=%GREET1%,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=left,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-38,E_TEXTCTRL_Text=Text first name to 888-887-1423,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-26,E_TEXTCTRL_Text=updated as they,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
-    <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 14,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-45,E_TEXTCTRL_Text=arrive.,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 12 windows-1252,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-26,E_TEXTCTRL_Text=updated as they,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
+    <Effect>E_CHECKBOX_Text_Color_PerWord=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_FONTPICKER_Text_Font='segoe ui' 12 windows-1252,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-45,E_TEXTCTRL_Text=arrive.,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=0.3,T_TEXTCTRL_Fadeout=0.3</Effect>
     <Effect>E_CHECKBOX_FIRETIMING=1,E_CHECKBOX_Fireworks_Gravity=0,E_CHECKBOX_Fireworks_UseMusic=0,E_CHOICE_FIRETIMINGTRACK=Fireworks,E_SLIDER_Fireworks_Count=100,E_SLIDER_Fireworks_Explosions=46,E_SLIDER_Fireworks_Fade=50,E_SLIDER_Fireworks_Velocity=2</Effect>
     <Effect>E_CHECKBOX_Fire_GrowWithMusic=0,E_CHOICE_Fire_Location=Bottom,E_SLIDER_Fire_Height=31,E_SLIDER_Fire_HueShift=0,E_TEXTCTRL_Fire_GrowthCycles=0.0,T_TEXTCTRL_Fadein=1.0,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHOICE_Butterfly_Colors=Rainbow,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1,T_CHOICE_LayerMethod=2 is Unmask,T_TEXTCTRL_Fadein=1.0,T_TEXTCTRL_Fadeout=0.5</Effect>
@@ -80,7 +84,7 @@
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=8-8x8 Thin,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 12,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=5,E_TEXTCTRL_Text=887,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=1.0,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=8-8x8 Thin,E_FILEPICKERCTRL_Text_File=,E_FONTPICKER_Text_Font=Ubuntu 12,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-10,E_TEXTCTRL_Text=1423,E_TEXTCTRL_Text_Speed=10,T_TEXTCTRL_Fadein=1.0,T_TEXTCTRL_Fadeout=0.5</Effect>
     <Effect>B_CHOICE_BufferStyle=Overlay - Scaled,E_CHECKBOX_Fan_Blend_Edges=1,E_CHECKBOX_Fan_Reverse=0,E_NOTEBOOK_Fan=Blades,E_SLIDER_Fan_Accel=0,E_SLIDER_Fan_Blade_Angle=0,E_SLIDER_Fan_Blade_Width=100,E_SLIDER_Fan_CenterX=50,E_SLIDER_Fan_CenterY=50,E_SLIDER_Fan_Duration=100,E_SLIDER_Fan_Element_Width=100,E_SLIDER_Fan_End_Radius=149,E_SLIDER_Fan_Num_Blades=1,E_SLIDER_Fan_Num_Elements=1,E_SLIDER_Fan_Revolutions=720,E_SLIDER_Fan_Start_Angle=0,E_SLIDER_Fan_Start_Radius=1,T_TEXTCTRL_Fadeout=0.5</Effect>
-    <Effect>B_CHOICE_BufferStyle=Per Model Default,E_CHECKBOX_Pictures_PixelOffsets=0,E_CHECKBOX_Pictures_Shimmer=0,E_CHECKBOX_Pictures_TransparentBlack=0,E_CHECKBOX_Pictures_WrapX=0,E_CHOICE_Pictures_Direction=none,E_CHOICE_Scaling=No Scaling,E_FILEPICKER_Pictures_Filename=/home/ghormann/xlightsData/media/snowflake1_46.png,E_SLIDER_PicturesXC=0,E_SLIDER_PicturesYC=0,E_SLIDER_Pictures_EndScale=100,E_SLIDER_Pictures_StartScale=100,E_TEXTCTRL_Pictures_FrameRateAdj=1.0,E_TEXTCTRL_Pictures_Speed=1.0,E_TEXTCTRL_Pictures_TransparentBlack=0,T_CHOICE_LayerMethod=Min</Effect>
+    <Effect>B_CHOICE_BufferStyle=Per Model Default,E_CHECKBOX_Pictures_PixelOffsets=0,E_CHECKBOX_Pictures_Shimmer=0,E_CHECKBOX_Pictures_TransparentBlack=0,E_CHECKBOX_Pictures_WrapX=0,E_CHOICE_Pictures_Direction=none,E_CHOICE_Scaling=No Scaling,E_FILEPICKER_Pictures_Filename=C:\Users\ghorm\Documents\xlights\Test_show_directory\media\from_linux\snowflake1_46.png,E_SLIDER_PicturesXC=0,E_SLIDER_PicturesYC=0,E_SLIDER_Pictures_EndScale=100,E_SLIDER_Pictures_StartScale=100,E_TEXTCTRL_Pictures_FrameRateAdj=1.0,E_TEXTCTRL_Pictures_Speed=1.0,E_TEXTCTRL_Pictures_TransparentBlack=0,T_CHOICE_LayerMethod=Min</Effect>
   </EffectDB>
   <DataLayers>
     <DataLayer lor_params="7798816" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
@@ -286,7 +290,7 @@
         <Effect ref="1" name="Curtain" id="1" startTime="45100" endTime="54100" palette="1"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="2" name="Color Wash" selected="1" startTime="0" endTime="61900" palette="0"/>
+        <Effect ref="2" name="Color Wash" startTime="0" endTime="61900" palette="0"/>
         <Effect ref="3" name="On" id="1" startTime="61950" endTime="62450" palette="2"/>
         <Effect ref="4" name="On" id="2" startTime="62450" endTime="64000" palette="3"/>
       </EffectLayer>
@@ -310,60 +314,62 @@
     <Element type="model" name="Bush_New">
       <EffectLayer>
         <Effect ref="9" name="Shader" startTime="0" endTime="8850" palette="1"/>
-        <Effect ref="10" name="Warp" id="1" startTime="8900" endTime="18000" palette="1"/>
+        <Effect ref="10" name="Shader" id="1" startTime="18000" endTime="26800" palette="5"/>
+        <Effect ref="11" name="Shader" id="2" startTime="26800" endTime="35800" palette="5"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="11" name="Butterfly" startTime="9150" endTime="18000" palette="1"/>
-        <Effect ref="12" name="Fan" id="1" startTime="26800" endTime="35800" palette="5"/>
-        <Effect ref="13" name="Shader" id="2" startTime="35850" endTime="44800" palette="1"/>
-        <Effect ref="14" name="Shader" id="3" startTime="45000" endTime="54200" palette="1"/>
-        <Effect ref="15" name="Shader" id="4" startTime="54200" endTime="61950" palette="4"/>
+        <Effect ref="12" name="Shader" startTime="9150" endTime="18000" palette="5"/>
+        <Effect ref="13" name="Shader" id="1" startTime="35850" endTime="44800" palette="1"/>
+        <Effect ref="14" name="Shader" id="2" startTime="45000" endTime="54200" palette="1"/>
+        <Effect ref="15" name="Shader" id="3" startTime="54200" endTime="61950" palette="4"/>
+        <Effect ref="16" name="Text" id="4" startTime="61950" endTime="64050" palette="6"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="16" name="Off" startTime="43200" endTime="45000" palette="1"/>
+        <Effect ref="17" name="Off" startTime="43200" endTime="45000" palette="1"/>
+        <Effect ref="18" name="On" id="1" startTime="61950" endTime="64050" palette="7"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="All CoroStars">
       <EffectLayer>
-        <Effect ref="17" name="Fan" startTime="18000" endTime="27000" palette="5"/>
-        <Effect ref="18" name="Fan" id="1" startTime="35800" endTime="44800" palette="5"/>
+        <Effect ref="19" name="Fan" startTime="18000" endTime="27000" palette="8"/>
+        <Effect ref="20" name="Fan" id="1" startTime="35800" endTime="44800" palette="8"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="House_Grid">
       <EffectLayer>
-        <Effect ref="19" name="Text" startTime="52000" endTime="61600" palette="3"/>
-        <Effect ref="20" name="Text" id="1" startTime="62450" endTime="64000" palette="3"/>
+        <Effect ref="21" name="Text" selected="1" startTime="52000" endTime="61600" palette="3"/>
+        <Effect ref="22" name="Text" id="1" startTime="62450" endTime="64000" palette="3"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="21" name="Text" startTime="0" endTime="52000" palette="6"/>
-        <Effect ref="22" name="Text" id="1" startTime="52000" endTime="61600" palette="3"/>
+        <Effect ref="23" name="Text" startTime="0" endTime="52000" palette="9"/>
+        <Effect ref="24" name="Text" id="1" startTime="52000" endTime="61600" palette="3"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="23" name="Text" startTime="0" endTime="4000" palette="3"/>
-        <Effect ref="24" name="Text" id="1" startTime="4000" endTime="8000" palette="3"/>
-        <Effect ref="25" name="Text" id="2" startTime="8000" endTime="12000" palette="3"/>
-        <Effect ref="26" name="Text" id="3" startTime="12000" endTime="16000" palette="3"/>
-        <Effect ref="27" name="Text" id="4" startTime="16000" endTime="20000" palette="3"/>
-        <Effect ref="28" name="Text" id="5" startTime="20000" endTime="24000" palette="3"/>
-        <Effect ref="29" name="Text" id="6" startTime="24000" endTime="28000" palette="3"/>
-        <Effect ref="30" name="Text" id="7" startTime="28000" endTime="32000" palette="3"/>
-        <Effect ref="31" name="Text" id="8" startTime="32000" endTime="36000" palette="3"/>
-        <Effect ref="32" name="Text" id="9" startTime="36000" endTime="40000" palette="3"/>
-        <Effect ref="33" name="Text" id="10" startTime="40000" endTime="44000" palette="3"/>
-        <Effect ref="34" name="Text" id="11" startTime="44000" endTime="48000" palette="3"/>
-        <Effect ref="35" name="Text" id="12" startTime="48000" endTime="52000" palette="3"/>
-        <Effect ref="36" name="Text" id="13" startTime="52000" endTime="61600" palette="6"/>
-        <Effect ref="37" name="Text" id="14" startTime="61950" endTime="64000" palette="6"/>
+        <Effect ref="25" name="Text" startTime="0" endTime="4000" palette="3"/>
+        <Effect ref="26" name="Text" id="1" startTime="4000" endTime="8000" palette="3"/>
+        <Effect ref="27" name="Text" id="2" startTime="8000" endTime="12000" palette="3"/>
+        <Effect ref="28" name="Text" id="3" startTime="12000" endTime="16000" palette="3"/>
+        <Effect ref="29" name="Text" id="4" startTime="16000" endTime="20000" palette="3"/>
+        <Effect ref="30" name="Text" id="5" startTime="20000" endTime="24000" palette="3"/>
+        <Effect ref="31" name="Text" id="6" startTime="24000" endTime="28000" palette="3"/>
+        <Effect ref="32" name="Text" id="7" startTime="28000" endTime="32000" palette="3"/>
+        <Effect ref="33" name="Text" id="8" startTime="32000" endTime="36000" palette="3"/>
+        <Effect ref="34" name="Text" id="9" startTime="36000" endTime="40000" palette="3"/>
+        <Effect ref="35" name="Text" id="10" startTime="40000" endTime="44000" palette="3"/>
+        <Effect ref="36" name="Text" id="11" startTime="44000" endTime="48000" palette="3"/>
+        <Effect ref="37" name="Text" id="12" startTime="48000" endTime="52000" palette="3"/>
+        <Effect ref="38" name="Text" id="13" startTime="52000" endTime="61600" palette="9"/>
+        <Effect ref="39" name="Text" id="14" startTime="61950" endTime="64000" palette="9"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="38" name="Text" startTime="0" endTime="52000" palette="7"/>
-        <Effect ref="39" name="Text" id="1" startTime="52000" endTime="61600" palette="6"/>
+        <Effect ref="40" name="Text" startTime="0" endTime="52000" palette="10"/>
+        <Effect ref="41" name="Text" id="1" startTime="52000" endTime="61600" palette="9"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="40" name="Text" startTime="52000" endTime="61600" palette="6"/>
+        <Effect ref="42" name="Text" startTime="52000" endTime="61600" palette="9"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="41" name="Fireworks" startTime="0" endTime="52000" palette="8"/>
+        <Effect ref="43" name="Fireworks" startTime="0" endTime="52000" palette="6"/>
       </EffectLayer>
       <EffectLayer>
         <Effect ref="3" name="Off" startTime="0" endTime="64000" palette="0"/>
@@ -404,19 +410,19 @@
     </Element>
     <Element type="model" name="MegaTree">
       <EffectLayer>
-        <Effect ref="42" name="Fire" startTime="0" endTime="61950" palette="1"/>
+        <Effect ref="44" name="Fire" startTime="0" endTime="61950" palette="1"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="43" name="Butterfly" startTime="0" endTime="61900" palette="8"/>
+        <Effect ref="45" name="Butterfly" startTime="0" endTime="61900" palette="6"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="44" name="Text" startTime="0" endTime="61950" palette="8"/>
+        <Effect ref="46" name="Text" startTime="0" endTime="61950" palette="6"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="45" name="Text" startTime="0" endTime="61950" palette="8"/>
+        <Effect ref="47" name="Text" startTime="0" endTime="61950" palette="6"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="46" name="Text" startTime="0" endTime="61950" palette="8"/>
+        <Effect ref="48" name="Text" startTime="0" endTime="61950" palette="6"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Star Field">
@@ -442,7 +448,7 @@
     </Element>
     <Element type="model" name="AllMiniTreeStars">
       <EffectLayer>
-        <Effect ref="47" name="Fan" startTime="54100" endTime="61950" palette="9"/>
+        <Effect ref="49" name="Fan" startTime="54100" endTime="61950" palette="11"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="MiniTree1">
@@ -807,7 +813,7 @@
     </Element>
     <Element type="model" name="Windows">
       <EffectLayer>
-        <Effect ref="48" name="Pictures" startTime="100" endTime="64000" palette="10"/>
+        <Effect ref="50" name="Pictures" startTime="100" endTime="64000" palette="12"/>
       </EffectLayer>
     </Element>
   </ElementEffects>

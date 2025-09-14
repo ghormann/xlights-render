@@ -39,8 +39,8 @@ def genereateMidnightXml(nameString):
 	with open("name_list.txt", "w") as f_out:
         	f_out.write(nameString)
 
-	with open("wish_long_name.xml", "w+") as f_out:
-		with open("wish_long_template.xml") as f:
+	with open("wish_long_name.xsq", "w+") as f_out:
+		with open("wish_long_template.xsq") as f:
 			for line in f:
 				line = line.replace("%GREET1%", g1)
 				line = line.replace("%GREET2%", g2)
@@ -69,8 +69,8 @@ def genereateXml(names):
 	nB = names.pop(0)
 	nC = names.pop(0)
 	nD = names.pop(0)
-	with open("Wish_Name.xml", "w+") as f_out:
-		with open("Wish_Name_Template.xml") as f:
+	with open("Wish_Name.xsq", "w+") as f_out:
+		with open("Wish_Name_Template.xsq") as f:
 			for line in f:
 				line = line.replace("%NAME1%", n1)
 				line = line.replace("%NAME2%", n2)
@@ -91,12 +91,12 @@ def genereateXml(names):
 	logIt("XML Complete");
 
 def getFileName(midnight, isSeq):
-	name = "Wish_Name.xml"
+	name = "Wish_Name.xsq"
 	if midnight:
-		name = "wish_long_name.xml"
+		name = "wish_long_name.xsq"
 
 	if isSeq:
-		name = name.replace(".xml", ".fseq")
+		name = name.replace(".xsq", ".fseq")
 	return name
 
 def generateSeq(midnight = False):
