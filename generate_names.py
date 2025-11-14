@@ -105,7 +105,7 @@ def generateSeq(midnight = False):
 	logIt("SEQ Complete " + name);
 
 def sendSeqName(name):
-	for ip in ["192.168.1.150", "192.168.1.156"]:
+	for ip in ["192.168.1.150", "192.168.1.156","192.168.1.160"]:
 		url = f"http://{ip}/api/sequence/{name}"
 		localname = "@" + name;
 		parts = ["/usr/bin/curl", "-X", "POST", "--data-binary",  localname, url]
