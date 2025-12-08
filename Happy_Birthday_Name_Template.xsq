@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2021.21</version>
-    <author/>
-    <author-email/>
-    <author-website/>
-    <song/>
-    <artist/>
-    <album/>
-    <MusicURL/>
-    <comment/>
+    <version>2024.16.2</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song></song>
+    <artist></artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment></comment>
     <sequenceTiming>50 ms</sequenceTiming>
     <sequenceType>Media</sequenceType>
     <mediaFile>C:\Users\ghormann\Documents\xlights2016\Test_show_directory\media\happy_birthday_128.mp3</mediaFile>
@@ -21,6 +21,7 @@
   <ColorPalettes>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette4=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1</ColorPalette>
   </ColorPalettes>
   <EffectDB>
     <Effect>E_CHOICE_Butterfly_Colors=Rainbow,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
@@ -28,6 +29,8 @@
     <Effect>E_CHECKBOX_TextToCenter=0,E_CHECKBOX_Text_PixelOffsets=0,E_CHOICE_Text_Count=none,E_CHOICE_Text_Dir=none,E_CHOICE_Text_Effect=normal,E_CHOICE_Text_Font=Use OS Fonts,E_CHOICE_Text_LyricTrack=,E_FILEPICKERCTRL_Text_File=C:\Users\ghorm\Documents\xLights\Test_show_directory\name_list.txt,E_FONTPICKER_Text_Font='segoe ui' 14 windows-1252,E_SLIDER_Text_XEnd=0,E_SLIDER_Text_XStart=0,E_SLIDER_Text_YEnd=0,E_SLIDER_Text_YStart=-20,E_TEXTCTRL_Text=,E_TEXTCTRL_Text_Speed=10</Effect>
     <Effect>E_CHECKBOX_FIRETIMING=0,E_CHECKBOX_Fireworks_Gravity=0,E_CHECKBOX_Fireworks_UseMusic=1,E_SLIDER_Fireworks_Count=50,E_SLIDER_Fireworks_Explosions=16,E_SLIDER_Fireworks_Fade=50,E_SLIDER_Fireworks_Sensitivity=50,E_SLIDER_Fireworks_Velocity=2</Effect>
     <Effect></Effect>
+    <Effect>B_CHOICE_BufferStyle=Per Model Per Preview,E_CHECKBOX_Pictures_PixelOffsets=0,E_CHECKBOX_Pictures_Shimmer=0,E_CHECKBOX_Pictures_TransparentBlack=0,E_CHECKBOX_Pictures_WrapX=0,E_CHOICE_Pictures_Direction=none,E_CHOICE_Scaling=Scale Keep Aspect Ratio Crop,E_FILEPICKER_Pictures_Filename=C:\Users\ghorm\Documents\xlights\Test_show_directory\media\birthday_cake.png,E_SLIDER_PicturesXC=0,E_SLIDER_PicturesYC=0,E_SLIDER_Pictures_EndScale=100,E_SLIDER_Pictures_StartScale=100,E_TEXTCTRL_Pictures_FrameRateAdj=1.0,E_TEXTCTRL_Pictures_Speed=1.0,E_TEXTCTRL_Pictures_TransparentBlack=0,T_CHOICE_LayerMethod=1 is True Unmask</Effect>
+    <Effect>B_CHOICE_BufferStyle=Per Model Per Preview,E_CHECKBOX_Pictures_PixelOffsets=0,E_CHECKBOX_Pictures_Shimmer=0,E_CHECKBOX_Pictures_TransparentBlack=0,E_CHECKBOX_Pictures_WrapX=0,E_CHOICE_Pictures_Direction=none,E_CHOICE_Scaling=Scale Keep Aspect Ratio,E_FILEPICKER_Pictures_Filename=C:\Users\ghorm\Documents\xlights\Test_show_directory\media\birthday_cake.png,E_SLIDER_PicturesXC=0,E_SLIDER_PicturesYC=0,E_SLIDER_Pictures_EndScale=100,E_SLIDER_Pictures_StartScale=100,E_TEXTCTRL_Pictures_FrameRateAdj=1.0,E_TEXTCTRL_Pictures_Speed=1.0,E_TEXTCTRL_Pictures_TransparentBlack=0,T_CHOICE_LayerMethod=1 is True Unmask</Effect>
   </EffectDB>
   <DataLayers>
     <DataLayer lor_params="2556012" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
@@ -35,6 +38,12 @@
   <DisplayElements>
     <Element collapsed="0" type="model" name="Whole House" visible="1"/>
     <Element collapsed="0" type="model" name="House_Grid" visible="1"/>
+    <Element collapsed="0" type="model" name="Windows" visible="1"/>
+    <Element collapsed="0" type="model" name="Bush-Group-Individuals" visible="1"/>
+    <Element collapsed="0" type="model" name="Garage_Roof" visible="1"/>
+    <Element collapsed="0" type="model" name="Garage PPD Wreath" visible="0"/>
+    <Element collapsed="0" type="model" name="Garage Poinsettia LT" visible="0"/>
+    <Element collapsed="0" type="model" name="Garage Poinsettia RT" visible="0"/>
   </DisplayElements>
   <ElementEffects>
     <Element type="model" name="Whole House">
@@ -53,8 +62,45 @@
         <Effect ref="3" name="Fireworks" startTime="0" endTime="19200" palette="0"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="4" name="Off" selected="1" startTime="0" endTime="19200" palette="0"/>
+        <Effect ref="4" name="Off" startTime="0" endTime="19200" palette="0"/>
       </EffectLayer>
+    </Element>
+    <Element type="model" name="Windows">
+      <EffectLayer>
+        <Effect ref="5" name="Pictures" startTime="0" endTime="19200" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Bush-Group-Individuals">
+      <EffectLayer>
+        <Effect ref="6" name="Pictures" startTime="0" endTime="19200" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Garage_Roof">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Garage PPD Wreath">
+      <EffectLayer/>
+      <SubModelEffectLayer name="SpiralsCW">
+        <Effect ref="4" name="Off" startTime="0" endTime="19450" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="SpiralsCCW">
+        <Effect ref="4" name="Off" startTime="0" endTime="19350" palette="2"/>
+      </SubModelEffectLayer>
+    </Element>
+    <Element type="model" name="Garage Poinsettia LT">
+      <EffectLayer/>
+      <SubModelEffectLayer name="SpiralsCW">
+        <Effect ref="4" name="Off" startTime="0" endTime="19400" palette="2"/>
+      </SubModelEffectLayer>
+    </Element>
+    <Element type="model" name="Garage Poinsettia RT">
+      <EffectLayer/>
+      <SubModelEffectLayer name="SpiralsCCW">
+        <Effect ref="4" name="Off" startTime="0" endTime="19050" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarOffset1">
+        <Effect ref="4" name="Off" selected="1" startTime="0" endTime="19050" palette="2"/>
+      </SubModelEffectLayer>
     </Element>
   </ElementEffects>
   <lastView>0</lastView>
