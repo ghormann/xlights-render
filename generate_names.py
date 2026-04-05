@@ -33,7 +33,10 @@ def generateBirthday(nameString):
 				line = line.replace("%GREET2%", g2)
 				f_out.write(line)
 	# Run xLights
-	subprocess.run(["xLights", "-r", filename], check=True)
+	result = subprocess.run(["xLights", "-r", filename])
+	if result.returncode != 0:
+		logIt(f"ERROR: xLights returned {result.returncode} for {filename}")
+		return
 	sendSeqName(seqName)
 
 
@@ -114,7 +117,10 @@ def getFileName(midnight, isSeq):
 
 def generateSeq(midnight=False):
 	name = getFileName(midnight, False)
-	subprocess.run(["xLights", "-r", name], check=True)
+	result = subprocess.run(["xLights", "-r", name])
+	if result.returncode != 0:
+		logIt(f"ERROR: xLights returned {result.returncode} for {name}")
+		return
 	logIt("SEQ Complete " + name)
 
 
@@ -124,7 +130,10 @@ def sendSeqName(name):
 		localname = "@" + name
 		parts = ["/usr/bin/curl", "-X", "POST", "--data-binary", localname, url]
 		logIt(" ".join(parts))
-		subprocess.run(parts, check=True)
+		result = subprocess.run(parts)
+		if result.returncode != 0:
+			logIt(f"ERROR: curl returned {result.returncode} for {ip}")
+			continue
 		logIt(f"Upload complete - {ip}")
 
 
