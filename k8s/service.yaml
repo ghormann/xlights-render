@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: xlights-render-vnc
+  namespace: default
+  labels:
+    app: xlights-render
+  # Uncomment and set to request a specific IP from MetalLB's address pool:
+  # annotations:
+  #   metallb.universe.tf/loadBalancerIPs: 192.168.1.200
+spec:
+  type: LoadBalancer
+  selector:
+    app: xlights-render
+  ports:
+    - name: vnc
+      port: 5900
+      targetPort: 5900
+      protocol: TCP
