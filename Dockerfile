@@ -45,11 +45,16 @@ RUN wget -q -O /tmp/xLights.AppImage "${XLIGHTS_APPIMAGE_URL}" \
 COPY requirements.txt /app/requirements.txt
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 
+# xLights config — pre-seeded so xLights starts without prompting for a show directory
+RUN mkdir -p /root/.config
+COPY xLights.conf /root/.config/xLights.conf
+
 # Application files
 COPY entrypoint.sh /entrypoint.sh
 COPY main.py generate_names.py /app/
 COPY *.xsq *.xml /app/
 COPY Shaders/ /app/Shaders/
+COPY media/ /app/media/
 
 WORKDIR /app
 ENV DISPLAY=:99

@@ -1,21 +1,22 @@
 import datetime
+import logging
 import subprocess
 
 LOG_FILE = "greg.log"
-_LOG = None
 
-
-def _get_log():
-	global _LOG
-	if _LOG is None:
-		_LOG = open(LOG_FILE, 'a+')
-	return _LOG
+logging.basicConfig(
+	level=logging.INFO,
+	format="%(asctime)s: %(message)s",
+	handlers=[
+		logging.FileHandler(LOG_FILE),
+		logging.StreamHandler(),
+	],
+)
+_LOG = logging.getLogger(__name__)
 
 
 def logIt(msg):
-	_get_log().write(str(datetime.datetime.now()) + ": " + str(msg) + "\n")
-	print(str(datetime.datetime.now()) + ": " + str(msg))
-	_get_log().flush()
+	_LOG.info(msg)
 
 
 def generateBirthday(nameString):
@@ -128,7 +129,7 @@ def sendSeqName(name):
 	for ip in ["192.168.1.150", "192.168.1.156", "192.168.1.160"]:
 		url = f"http://{ip}/api/sequence/{name}"
 		localname = "@" + name
-		parts = ["/usr/bin/curl", "-X", "POST", "--data-binary", localname, url]
+		parts = ["/usr/bin/curl", "--connect-timeout", "5", "-X", "POST", "--data-binary", localname, url]
 		logIt(" ".join(parts))
 		result = subprocess.run(parts)
 		if result.returncode != 0:
