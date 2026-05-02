@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xlights-render
+  namespace: default
+  labels:
+    app: xlights-render
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xlights-render
+  template:
+    metadata:
+      labels:
+        app: xlights-render
+    spec:
+      containers:
+        - name: xlights-render
+          image: xlights-render:2025.13
+          env:
+            - name: DISPLAY
+              value: ":99"
+          ports:
+            - containerPort: 5900
+              name: vnc
+              protocol: TCP
+          resources:
+            requests:
+              memory: "4Gi"
+              cpu: "4"
+            limits:
+              memory: "4Gi"
+              cpu: "4"
+          volumeMounts:
+            - name: config
+              mountPath: /app/greglights_config.json
+              subPath: greglights_config.json
+              readOnly: true
+      volumes:
+        - name: config
+          secret:
+            secretName: xlights-render-config
