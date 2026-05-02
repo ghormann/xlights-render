@@ -51,7 +51,7 @@ COPY xLights.conf /root/.config/xLights.conf
 
 # Application files
 COPY entrypoint.sh /entrypoint.sh
-COPY main.py generate_names.py /app/
+COPY main.py generate_names.py config.py /app/
 COPY *.xsq *.xml /app/
 COPY Shaders/ /app/Shaders/
 COPY media/ /app/media/

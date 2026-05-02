@@ -26,6 +26,7 @@ Special cases are also handled:
 ```
 main.py                     # MQTT client, name queue, state machine
 generate_names.py           # Template filling, xLights invocation, FPP upload
+config.py                   # GregLightsConfig — reads and validates greglights_config.json
 Wish_Name_Template.xsq      # Template for the standard 13-name sequence
 Happy_Birthday_Name_Template.xsq  # Template for birthday sequences
 wish_long_template.xsq      # Template for the midnight all-names sequence
@@ -74,26 +75,32 @@ docs/
 
 ## FPP Upload Targets
 
-Rendered `.fseq` files are uploaded via HTTP POST to three FPP instances:
-
-- `192.168.1.150`
-- `192.168.1.156`
-- `192.168.1.160`
+Rendered `.fseq` files are uploaded via HTTP POST to the FPP instances listed in the `fpp_ips` field of `greglights_config.json`.
 
 ---
 
 ## Configuration
 
-The app reads MQTT credentials from `greglights_config.json` at startup:
+The app reads all configuration from `greglights_config.json` at startup:
 
 ```json
 {
   "host": "mqtt.example.com",
   "port": 1883,
   "username": "user",
-  "password": "secret"
+  "password": "secret",
+  "fpp_ips": ["192.168.1.150", "192.168.1.156", "192.168.1.160"],
+  "base_names": [
+    "JEFF", "BRADY", "MARY", "NANCY", "JERRY", "HENERY",
+    "ALEX", "TIM", "ABBIE", "MELISSA", "JUDY", "BRODY",
+    "EMILY", "MATT", "WILL", "JULIA", "SOPHIE", "LONDON",
+    "MAX", "BENNY", "LUIS", "KORIE"
+  ]
 }
 ```
+
+- `fpp_ips` — list of Falcon Player HTTP endpoints to receive rendered `.fseq` files (at least 1 required)
+- `base_names` — fallback names used to pad a generation cycle to 13 when the queue is short (at least 13 required)
 
 This file is never committed. When running in Docker or Kubernetes, it is injected at runtime (see the docs below).
 

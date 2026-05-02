@@ -19,7 +19,7 @@ def logIt(msg):
 	_LOG.info(msg)
 
 
-def generateBirthday(nameString):
+def generateBirthday(nameString, ips):
 	filename = "Happy_Birthday_name.xsq"
 	seqName = "Happy_Birthday_name.fseq"
 	g1 = "Happy Birthday"
@@ -38,7 +38,7 @@ def generateBirthday(nameString):
 	if result.returncode != 0:
 		logIt(f"ERROR: xLights returned {result.returncode} for {filename}")
 		return
-	sendSeqName(seqName)
+	sendSeqName(seqName, ips)
 
 
 # Call with a long string of names
@@ -125,8 +125,8 @@ def generateSeq(midnight=False):
 	logIt("SEQ Complete " + name)
 
 
-def sendSeqName(name):
-	for ip in ["192.168.1.150", "192.168.1.156", "192.168.1.160"]:
+def sendSeqName(name, ips):
+	for ip in ips:
 		url = f"http://{ip}/api/sequence/{name}"
 		localname = "@" + name
 		parts = ["/usr/bin/curl", "--connect-timeout", "5", "-X", "POST", "--data-binary", localname, url]
@@ -138,9 +138,9 @@ def sendSeqName(name):
 		logIt(f"Upload complete - {ip}")
 
 
-def sendSeq(midnight=False):
+def sendSeq(midnight=False, ips=None):
 	name = getFileName(midnight, True)
-	sendSeqName(name)
+	sendSeqName(name, ips or [])
 
 
 if __name__ == "__main__":

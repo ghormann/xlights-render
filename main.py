@@ -5,8 +5,7 @@ import time
 import ssl
 from random import shuffle
 import generate_names as gen
-
-baseNames = ['JEFF', 'BRADY', 'MARY', 'NANCY', 'JERRY', 'HENERY', 'ALEX', 'TIM', 'ABBIE', 'MELISSA', 'JUDY', 'BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE']
+from config import GregLightsConfig
 
 epoch = datetime.datetime.utcfromtimestamp(0)
 
@@ -24,12 +23,11 @@ def json_serial(obj):
 
 class MQTTClient:
 	"""Very simple MQTTClient for listening to names to be displayed on Grid"""
-	def __init__(self):
-		with open('greglights_config.json') as f:
-			config = json.load(f)
+	def __init__(self, config: GregLightsConfig):
+		self.config = config
 		client = paho.Client(paho.CallbackAPIVersion.VERSION1)
 		self.client = client
-		#client.tls_set(ca_certs=config["ca_file"], tls_version=ssl.PROTOCOL_TLSv1_2)
+		#client.tls_set(ca_certs=config.ca_file, tls_version=ssl.PROTOCOL_TLSv1_2)
 		client.on_connect = self._on_connect
 		client.on_message = self._on_message
 		self.status = "IDLE"
@@ -44,8 +42,8 @@ class MQTTClient:
 		client.message_callback_add("/christmas/personsNameLow", self.on_name_low)
 		client.message_callback_add("/christmas/nameAction", self.on_action)
 		client.message_callback_add("/christmas/nameBirthday", self.on_birthday)
-		client.username_pw_set(config["username"], config["password"])
-		client.connect(host=config["host"], port=config["port"])
+		client.username_pw_set(config.username, config.password)
+		client.connect(host=config.host, port=config.port)
 		client.loop_start()
 
 	def _on_connect(self, client, userdata, flags, rc):
@@ -157,7 +155,7 @@ class MQTTClient:
 		return self.status
 
 	def genBirthday(self):
-		gen.generateBirthday(self.birthday)
+		gen.generateBirthday(self.birthday, self.config.fpp_ips)
 		self.birthday = ""
 
 	def updateSong(self, midnight=False):
@@ -179,7 +177,7 @@ class MQTTClient:
 		else:
 			use_me = []
 			use_me_names = []
-			extra = baseNames.copy()
+			extra = self.config.base_names.copy()
 			shuffle(extra)
 			while len(use_me) < 13:
 				if len(self.namequeue) > 0:
@@ -201,7 +199,7 @@ class MQTTClient:
 			self.namequeue_ready = use_me.copy()
 			gen.genereateXml(use_me_names)
 		gen.generateSeq(midnight)
-		gen.sendSeq(midnight)
+		gen.sendSeq(midnight, self.config.fpp_ips)
 		# Done
 		self.status = "READY"
 		if midnight:
@@ -212,7 +210,7 @@ class MQTTClient:
 
 
 if __name__ == "__main__":
-	client = MQTTClient()
+	client = MQTTClient(GregLightsConfig())
 	#client.updateSong()
 	while True:
 		time.sleep(2)
