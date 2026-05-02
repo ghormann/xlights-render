@@ -1,0 +1,11 @@
+.git
+docs
+k8s
+*.md
+LICENSE
+*.log
+*.fseq
+name_list.txt
+Wish_Name.xsq
+wish_long_name.xsq
+Happy_Birthday_name.xsq
