@@ -1,21 +1,30 @@
 import datetime
 import subprocess
 
-LOG_FILE="greg.log"
-LOG= open(LOG_FILE, 'a+')
+LOG_FILE = "greg.log"
+_LOG = None
+
+
+def _get_log():
+	global _LOG
+	if _LOG is None:
+		_LOG = open(LOG_FILE, 'a+')
+	return _LOG
+
 
 def logIt(msg):
-	LOG.write(str(datetime.datetime.now()) + ": " + str(msg) + "\n")
-	print(str(datetime.datetime.now()) + ": " + str(msg) )
-	LOG.flush()
+	_get_log().write(str(datetime.datetime.now()) + ": " + str(msg) + "\n")
+	print(str(datetime.datetime.now()) + ": " + str(msg))
+	_get_log().flush()
+
 
 def generateBirthday(nameString):
 	filename = "Happy_Birthday_name.xsq"
 	seqName = "Happy_Birthday_name.fseq"
-	g1="Happy Birthday"
-	g2="Happy Birthday"
+	g1 = "Happy Birthday"
+	g2 = "Happy Birthday"
 	with open("name_list.txt", "w") as f_out:
-        	f_out.write(nameString)
+		f_out.write(nameString)
 
 	with open(filename, "w+") as f_out:
 		with open("Happy_Birthday_Name_Template.xsq") as f:
@@ -24,8 +33,12 @@ def generateBirthday(nameString):
 				line = line.replace("%GREET2%", g2)
 				f_out.write(line)
 	# Run xLights
-	subprocess.call(["xLights", "-r", filename])
+	result = subprocess.run(["xLights", "-r", filename])
+	if result.returncode != 0:
+		logIt(f"ERROR: xLights returned {result.returncode} for {filename}")
+		return
 	sendSeqName(seqName)
+
 
 # Call with a long string of names
 def genereateMidnightXml(nameString):
@@ -37,7 +50,7 @@ def genereateMidnightXml(nameString):
 		g2 = "New Year"
 	logIt(f"Genereating Midnight with {g1} {g2}")
 	with open("name_list.txt", "w") as f_out:
-        	f_out.write(nameString)
+		f_out.write(nameString)
 
 	with open("wish_long_name.xsq", "w+") as f_out:
 		with open("wish_long_template.xsq") as f:
@@ -46,7 +59,8 @@ def genereateMidnightXml(nameString):
 				line = line.replace("%GREET2%", g2)
 				f_out.write(line)
 
-	logIt("Midnight XML Complete");
+	logIt("Midnight XML Complete")
+
 
 # Call with exact 13 names
 def genereateXml(names):
@@ -88,7 +102,8 @@ def genereateXml(names):
 				line = line.replace("%GREET1%", g1)
 				line = line.replace("%GREET2%", g2)
 				f_out.write(line)
-	logIt("XML Complete");
+	logIt("XML Complete")
+
 
 def getFileName(midnight, isSeq):
 	name = "Wish_Name.xsq"
@@ -99,27 +114,37 @@ def getFileName(midnight, isSeq):
 		name = name.replace(".xsq", ".fseq")
 	return name
 
-def generateSeq(midnight = False):
+
+def generateSeq(midnight=False):
 	name = getFileName(midnight, False)
-	subprocess.call(["xLights", "-r", name])
-	logIt("SEQ Complete " + name);
+	result = subprocess.run(["xLights", "-r", name])
+	if result.returncode != 0:
+		logIt(f"ERROR: xLights returned {result.returncode} for {name}")
+		return
+	logIt("SEQ Complete " + name)
+
 
 def sendSeqName(name):
-	for ip in ["192.168.1.150", "192.168.1.156","192.168.1.160"]:
+	for ip in ["192.168.1.150", "192.168.1.156", "192.168.1.160"]:
 		url = f"http://{ip}/api/sequence/{name}"
-		localname = "@" + name;
-		parts = ["/usr/bin/curl", "-X", "POST", "--data-binary",  localname, url]
+		localname = "@" + name
+		parts = ["/usr/bin/curl", "-X", "POST", "--data-binary", localname, url]
 		logIt(" ".join(parts))
-		subprocess.call(parts)
+		result = subprocess.run(parts)
+		if result.returncode != 0:
+			logIt(f"ERROR: curl returned {result.returncode} for {ip}")
+			continue
 		logIt(f"Upload complete - {ip}")
 
-def sendSeq(midnight = False):
+
+def sendSeq(midnight=False):
 	name = getFileName(midnight, True)
 	sendSeqName(name)
 
+
 if __name__ == "__main__":
-        baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE', 'MARY', 'GREG', 'NANCY', 'JERRY', 'JIM', 'JEFF', 'ANGIE', 'DON', 'MAGGIE']
-        #genereateXml(baseNames)
-        genereateMidnightXml("This is a test.   It is only a test")
-        generateSeq(True)
-        sendSeq(True)
+	baseNames = ['BRODY', 'EMILY', 'MATT', 'WILL', 'JULIA', 'SOPHIE', 'LONDON', 'MAX', 'BENNY', 'LUIS', 'KORIE', 'MARY', 'GREG', 'NANCY', 'JERRY', 'JIM', 'JEFF', 'ANGIE', 'DON', 'MAGGIE']
+	#genereateXml(baseNames)
+	genereateMidnightXml("This is a test.   It is only a test")
+	generateSeq(True)
+	sendSeq(True)
