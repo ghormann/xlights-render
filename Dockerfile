@@ -19,6 +19,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxrandr2 \
     libasound2 \
     libpulse0 \
+    libgtk-3-0 \
+    libgdk-pixbuf2.0-0 \
+    libpango-1.0-0 \
+    libcairo2 \
+    libatk1.0-0 \
+    libgbm1 \
+    libegl1 \
     python3 \
     python3-pip \
     curl \
@@ -31,7 +38,8 @@ RUN wget -q -O /tmp/xLights.AppImage "${XLIGHTS_APPIMAGE_URL}" \
     && cd /tmp && /tmp/xLights.AppImage --appimage-extract \
     && mv /tmp/squashfs-root /opt/xlights \
     && rm /tmp/xLights.AppImage \
-    && ln -s /opt/xlights/AppRun /usr/local/bin/xLights
+    && printf '#!/bin/bash\nexec /opt/xlights/AppRun "$@"\n' > /usr/local/bin/xLights \
+    && chmod +x /usr/local/bin/xLights
 
 # Python dependencies
 COPY requirements.txt /app/requirements.txt
