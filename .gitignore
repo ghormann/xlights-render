@@ -10,3 +10,4 @@ media
 __pycache__
 greg.log
 name_list.txt
+k8s/secret.yaml
