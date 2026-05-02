@@ -112,7 +112,8 @@ No changes to existing Python code. New files added to the repo:
 |------|---------|
 | `Dockerfile` | Image build, AppImage extraction, system deps |
 | `entrypoint.sh` | Start Xvfb, x11vnc, then Python app |
-| `docs/kubernetes.md` | Operational guide: build, deploy, connect VNC |
+| `docs/kubernetes.md` | Operational guide: build, deploy, connect VNC on k8s |
+| `docs/run-docker.md` | Instructions for running the image locally via Docker for testing, including VNC access |
 | `k8s/deployment.yaml` | Example Deployment manifest |
 | `k8s/service.yaml` | Example LoadBalancer Service manifest |
 | `k8s/secret-template.yaml` | Template for greglights_config Secret |
