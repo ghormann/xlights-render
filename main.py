@@ -1,11 +1,15 @@
 import paho.mqtt.client as paho
 import datetime
 import json
+import os
 import time
 import ssl
+from pathlib import Path
 from random import shuffle
 import generate_names as gen
 from config import GregLightsConfig
+
+STATE_FILE = Path(__file__).parent / "cache" / "state.json"
 
 epoch = datetime.datetime.utcfromtimestamp(0)
 
@@ -45,6 +49,7 @@ class MQTTClient:
 		client.username_pw_set(config.username, config.password)
 		client.connect(host=config.host, port=config.port)
 		client.loop_start()
+		self.load_state()
 
 	def _on_connect(self, client, userdata, flags, rc):
 		gen.logIt("Connected with result code " + str(rc))
@@ -59,6 +64,47 @@ class MQTTClient:
 
 	def _on_message(self, client, userdata, msg):
 		gen.logIt("Unhandled Topic: " + msg.topic)
+
+	def save_state(self):
+		state = {
+			"namequeue": self.namequeue,
+			"namequeue_low": self.namequeue_low,
+			"namequeue_ready": self.namequeue_ready,
+			"midnight_names": self.midnight_names,
+			"status": self.status,
+			"birthday": self.birthday,
+		}
+		tmp = STATE_FILE.with_suffix(".tmp")
+		try:
+			with open(tmp, 'w') as f:
+				json.dump(state, f, default=json_serial)
+			os.replace(tmp, STATE_FILE)
+		except Exception as e:
+			gen.logIt("ERROR: Failed to save state: " + str(e))
+
+	def load_state(self):
+		STATE_FILE.parent.mkdir(exist_ok=True)
+		if not STATE_FILE.exists():
+			gen.logIt("No state file found, starting fresh")
+			return
+		try:
+			with open(STATE_FILE) as f:
+				state = json.load(f)
+			self.namequeue = state.get("namequeue", [])
+			self.namequeue_low = state.get("namequeue_low", [])
+			self.namequeue_ready = state.get("namequeue_ready", [])
+			self.midnight_names = state.get("midnight_names", [])
+			self.status = state.get("status", "IDLE")
+			self.birthday = state.get("birthday", "")
+			gen.logIt("Loaded state: " + str(len(self.namequeue)) + " queued, " +
+				str(len(self.namequeue_low)) + " low, " +
+				str(len(self.midnight_names)) + " midnight names")
+		except Exception as e:
+			gen.logIt("ERROR: Corrupt state file, deleting and starting fresh: " + str(e))
+			try:
+				STATE_FILE.unlink()
+			except Exception:
+				pass
 
 	def publishQueue(self):
 		full_queue = {}
@@ -76,11 +122,13 @@ class MQTTClient:
 			self.midnight_names.insert(0, name)
 		if len(self.midnight_names) > 150:
 			del self.midnight_names[150:]
+		self.save_state()
 
 	def on_birthday(self, client, userdata, msg):
 		name = msg.payload.decode('UTF-8').upper()
 		gen.logIt("Received Birthday " + msg.topic + " " + name)
 		self.birthday = name
+		self.save_state()
 
 	def on_action(self, client, userdata, msg):
 		action = msg.payload.decode('UTF-8').upper()
@@ -96,12 +144,13 @@ class MQTTClient:
 			self.namequeue_ready = []
 		else:
 			gen.logIt("ERROR: Invalid action " + msg.topic + " " + action + " while in state " + self.status)
+		self.save_state()
 
 	def on_name_front(self, client, userdata, msg):
 		data = json.loads(msg.payload.decode('UTF-8'))
 		gen.logIt("Received Name for Front " + msg.topic + " " + data['name'])
 		self.namequeue.insert(0, data)
-		self.insert_midnight_name(data['name'])
+		self.insert_midnight_name(data['name'])  # insert_midnight_name calls save_state
 
 	def on_name_remove(self, client, userdata, msg):
 		data = json.loads(msg.payload.decode('UTF-8'))
@@ -115,6 +164,7 @@ class MQTTClient:
 			if obj['name'] == name:
 				del self.namequeue_low[i]
 				break
+		self.save_state()
 
 	def on_name(self, client, userdata, msg):
 		data = json.loads(msg.payload.decode('UTF-8'))
@@ -131,6 +181,7 @@ class MQTTClient:
 		else:
 			self.namequeue.append(data)
 			gen.logIt('Adding to queue, size: ' + str(len(self.namequeue)))
+			self.save_state()
 
 	def on_name_low(self, client, userdata, msg):
 		data = json.loads(msg.payload.decode('UTF-8'))
@@ -147,6 +198,7 @@ class MQTTClient:
 		else:
 			self.namequeue_low.append(data)
 			gen.logIt('Adding to queue, size: ' + str(len(self.namequeue_low)))
+			self.save_state()
 
 	def getBirthday(self):
 		return self.birthday
@@ -157,6 +209,7 @@ class MQTTClient:
 	def genBirthday(self):
 		gen.generateBirthday(self.birthday, self.config.fpp_ips)
 		self.birthday = ""
+		self.save_state()
 
 	def updateSong(self, midnight=False):
 		gen.logIt("----------------------------")
@@ -204,6 +257,7 @@ class MQTTClient:
 		self.status = "READY"
 		if midnight:
 			self.status = "READY_MIDNIGHT"
+		self.save_state()
 		gen.logIt("----------------------------")
 		gen.logIt(datetime.datetime.now())
 		gen.logIt("----------------------------")

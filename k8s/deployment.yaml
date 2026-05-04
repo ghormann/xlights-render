@@ -7,6 +7,8 @@ metadata:
     app: xlights-render
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: xlights-render
@@ -37,7 +39,12 @@ spec:
               mountPath: /app/greglights_config.json
               subPath: greglights_config.json
               readOnly: true
+            - name: cache
+              mountPath: /app/cache
       volumes:
         - name: config
           secret:
             secretName: xlights-render-config
+        - name: cache
+          persistentVolumeClaim:
+            claimName: xlights-render-cache
