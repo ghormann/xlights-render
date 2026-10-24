@@ -62,6 +62,7 @@ docs/
 | `/christmas/nameBirthday` | Subscribe | Plain text name string |
 | `/christmas/nameAction` | Subscribe | `GENERATE`, `GENERATE_MIDNIGHT`, or `RESET` |
 | `/christmas/nameQueue` | Publish | JSON snapshot of all queues and current status |
+| `/christmas/nameBatch` | Publish | After each regular batch is sent to FPP: `{"ts": ..., "names": [{"name", "from", "ts"}]}` (filler names have `from: "System"`) |
 
 ---
 
