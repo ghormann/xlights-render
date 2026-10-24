@@ -115,6 +115,14 @@ class MQTTClient:
 		json_data = json.dumps(full_queue, default=json_serial)
 		self.client.publish("/christmas/nameQueue", json_data)
 
+	def publishNameBatch(self, names):
+		"""Reports a rendered batch so stats can measure each name's wait."""
+		batch = {
+			"ts": unix_ts(datetime.datetime.utcnow()),
+			"names": names,
+		}
+		self.client.publish("/christmas/nameBatch", json.dumps(batch, default=json_serial), 2)
+
 	def insert_midnight_name(self, name):
 		if name in self.midnight_names:
 			gen.logIt('Name already in midnight queue')
@@ -253,6 +261,8 @@ class MQTTClient:
 			gen.genereateXml(use_me_names)
 		gen.generateSeq(midnight)
 		gen.sendSeq(midnight, self.config.fpp_ips)
+		if not midnight:
+			self.publishNameBatch(self.namequeue_ready)
 		# Done
 		self.status = "READY"
 		if midnight:
